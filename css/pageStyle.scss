@@ -1,0 +1,188 @@
+@charset "UTF-8";
+$base-font-size: 50px !default; //变量的值可以根据自己需求定义
+@function pxTorem($px) { //$px为需要转换的字号
+  @return $px / $base-font-size * 1rem;
+}
+
+$font_size12: 12px;
+$font_size13: 13px;
+$font_size14: 14px;
+$font_size15: 15px;
+$font_size16: 16px;
+$font_size18: 18px;
+$font_size20: 20px;
+$font_size24: 24px;
+
+$fff: #fff;
+$red: #F43F36;
+$gray3: #24282C;
+$gray6: #221F32;
+$gray9: #9FA4AC;
+$pink: #FF7474;
+$perple: #6F92EA;
+$cyanBlue: #3BCBCA;
+$borderColor: #EAEDF2;
+
+@mixin backgroundImg($url) {
+  background: url($url);
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin border {
+  border: 1px solid $borderColor;
+}
+
+@mixin borderDir($dir, $color: $borderColor) {
+  border-#{$dir}: 1px solid $color;
+}
+
+.index {
+  position: relative;
+  height: 100%;
+  .map {
+    width: 100%;
+    height: 100vh;
+    background: gray;
+  }
+}
+
+.mapPage {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+
+  header{
+    position: absolute;
+    top: pxTorem(44px);
+    width: 100%;
+  }
+  .map-content {
+    position: absolute;
+    top: pxTorem(88px);
+    width: 100%;
+    height: calc(100% - 88px);
+    clear: both;
+    .weather-content {
+      height: pxTorem(34px);
+      margin-top: pxTorem(16px);
+      position: relative;
+      .lab {
+        float: left;
+        width: pxTorem(54px);
+        height: pxTorem(34px);
+        line-height: pxTorem(34px);
+        text-align: center;
+        font-size: pxTorem($font_size14);
+        margin-left: pxTorem(12px);
+        background: #FFFFFF;
+        box-shadow: 0 2px 4px 0 rgba(159, 164, 172, 0.50);
+        border-radius: 56px;
+      }
+      .weather {
+        float: right;
+        //margin: pxTorem(30px) pxTorem(12px) 0 0;
+        margin-top: pxTorem(5px);
+        overflow: hidden;
+        img {
+          width: pxTorem(30px);
+          height: pxTorem(22px);
+          float: left;
+          margin-right: pxTorem(10px);
+        }
+        p {
+          font-size: pxTorem($font_size20);
+          color: $fff;
+          text-align: center;
+          float: right;
+          //@include borderDir(left, $fff);
+          border-left: 2px solid $fff;
+          padding: 0 pxTorem(10px);
+          span {
+            font-size: pxTorem($font_size14);
+          }
+        }
+      }
+    }
+    .bubble {
+      width: pxTorem(40px);
+      height: pxTorem(44px);
+      line-height: pxTorem(40px);
+      font-size: pxTorem($font_size14);
+      color: $fff;
+      text-align: center;
+    }
+    .pink-bubble {
+      @include backgroundImg("../images/pink.png")
+    }
+    .cyan-blue-bubble {
+      @include backgroundImg("../images/cyan-blue.png")
+    }
+    .purple-bubble {
+      @include backgroundImg("../images/purple.png")
+    }
+    .sortList {
+      position: absolute;
+      left: 3.2%;
+      bottom: 12%;
+      .sort {
+        width: pxTorem(31px);
+        height: pxTorem(31px);
+        background: $pink;
+        border-radius: pxTorem(5px);
+        text-align: center;
+        font-size: pxTorem(10px);
+        span {
+          line-height: pxTorem(10px);
+        }
+      }
+      .sortB {
+        background: $perple;
+        margin-top: pxTorem(5px);
+      }
+      .sortC {
+        background: $cyanBlue;
+        margin-top: pxTorem(5px);
+      }
+    }
+    .notice {
+      width: pxTorem(30px);
+      height: pxTorem(30px);
+      position: absolute;
+      right: 3.2%;
+      bottom: 12%;
+      @include backgroundImg("../images/notice.png");
+      .tipsCircle {
+        width: pxTorem(9px);
+        height: pxTorem(9px);
+        border-radius: 50%;
+        background: $red;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+  button.viewData {
+    position: absolute;
+    bottom: pxTorem(12px);
+    width: 93.6%;
+    height: pxTorem(44px);
+    left: 3.2%;
+    line-height: pxTorem(44px);
+    text-align: center;
+    font-size: pxTorem($font_size16);
+    background: $fff;
+    box-shadow: 0 2px 4px 0 rgba(159,164,172,0.50);
+    border-radius: pxTorem(5px);
+  }
+}
+
+.detailPage {
+  z-index: 2;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 1400px;
+  background: lightblue;
+}

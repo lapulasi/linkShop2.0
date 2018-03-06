@@ -3,8 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1, minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/common.css">
+    <!--<link rel="stylesheet" href="css/animate.css">-->
+    <link rel="stylesheet" href="css/pageStyle.css">
 </head>
 <body>
-
+    <div class="index">
+        <div class="mapPage hide">
+            <div class="map"></div>
+            <div class="header" style="">
+                <h1>创维</h1>
+                <span class="userEnter"></span>
+            </div>
+            <header>
+                <nav>
+                    <ul>
+                        <li><span class="selectTab"></span></li>
+                        <li class="current">门店</li>
+                        <li>商圈</li>
+                        <li>城市</li>
+                        <li>省份</li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="map-content">
+                <div class="weather-content">
+                    <div class="lab">客流</div>
+                    <div class="weather">
+                        <img src="images/userIcon.png" alt="">
+                        <p>25 <span>℃</span></p>
+                    </div>
+                </div>
+                <div class="bubbles">
+                    <div class="bubble pink-bubble">234</div>
+                    <div class="bubble cyan-blue-bubble">234</div>
+                    <div class="bubble purple-bubble">234</div>
+                </div>
+                <div class="sortList">
+                    <div class="sort sortA">
+                        <span>978</span>
+                        <span>A类</span>
+                    </div>
+                    <div  class="sort sortB">
+                        <span>392</span>
+                        <span>A类</span>
+                    </div>
+                    <div  class="sort sortC">
+                        <span>423</span>
+                        <span>A类</span>
+                    </div>
+                </div>
+                <div class="notice">
+                    <span class="tipsCircle"></span>
+                </div>
+            </div>
+            <button class="viewData">点击查看所有门店总和数据</button>
+        </div>
+        <div class="detailPage">
+            <div class="header" style="">
+                <span class="backMap"></span>
+                <h1>创维</h1>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/pageTouchSwipe.js"></script>
+    <script src="js/fontSize.js"></script>
 </body>
 </html>
