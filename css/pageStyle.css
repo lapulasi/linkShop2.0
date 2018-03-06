@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .index {
   position: relative;
   height: 100%; }
@@ -6,6 +7,42 @@
     height: 100vh;
     background: gray; }
 
+/*气泡的样式start*/
+.bubblePanle {
+  width: 36%; }
+  .bubblePanle p {
+    font-size: 0.24rem;
+    color: #fff;
+    line-height: 0.24rem;
+    margin-top: 0.16rem;
+    text-align: center; }
+
+.bubble {
+  width: 0.8rem;
+  height: 0.88rem;
+  line-height: 0.8rem;
+  font-size: 0.28rem;
+  color: #fff;
+  text-align: center;
+  display: table;
+  margin: 0 auto; }
+
+.pink-bubble {
+  background: url("../images/pink.png");
+  background-position: center;
+  background-size: cover; }
+
+.cyan-blue-bubble {
+  background: url("../images/cyan-blue.png");
+  background-position: center;
+  background-size: cover; }
+
+.purple-bubble {
+  background: url("../images/purple.png");
+  background-position: center;
+  background-size: cover; }
+
+/*气泡的样式end*/
 .mapPage {
   z-index: 2;
   width: 100%;
@@ -15,6 +52,7 @@
     top: 0.88rem;
     width: 100%; }
   .mapPage .map-content {
+    pointer-events: none;
     position: absolute;
     top: 1.76rem;
     width: 100%;
@@ -53,32 +91,14 @@
           padding: 0 0.2rem; }
           .mapPage .map-content .weather-content .weather p span {
             font-size: 0.28rem; }
-    .mapPage .map-content .bubble {
-      width: 0.8rem;
-      height: 0.88rem;
-      line-height: 0.8rem;
-      font-size: 0.28rem;
-      color: #fff;
-      text-align: center; }
-    .mapPage .map-content .pink-bubble {
-      background: url("../images/pink.png");
-      background-position: center;
-      background-size: cover; }
-    .mapPage .map-content .cyan-blue-bubble {
-      background: url("../images/cyan-blue.png");
-      background-position: center;
-      background-size: cover; }
-    .mapPage .map-content .purple-bubble {
-      background: url("../images/purple.png");
-      background-position: center;
-      background-size: cover; }
     .mapPage .map-content .sortList {
       position: absolute;
       left: 3.2%;
       bottom: 12%; }
       .mapPage .map-content .sortList .sort {
         width: 0.62rem;
-        height: 0.62rem;
+        height: 0.58rem;
+        padding-top: 0.04rem;
         background: #FF7474;
         border-radius: 0.1rem;
         text-align: center;
@@ -122,11 +142,138 @@
     border-radius: 0.1rem; }
 
 .detailPage {
+  background: #fff;
   z-index: 2;
   position: absolute;
   top: 100%;
-  width: 100%;
-  height: 1400px;
-  background: lightblue; }
+  padding: 0 3.2% 1.6rem;
+  width: 93.6%; }
+  .detailPage .header {
+    width: 93.6%; }
+  .detailPage .level-1-title {
+    width: 100%;
+    height: 1.12rem;
+    font-size: 0.32rem;
+    line-height: 0.32rem; }
+    .detailPage .level-1-title span {
+      float: left; }
+    .detailPage .level-1-title .icon {
+      float: left;
+      width: 0.28rem;
+      height: 0.28rem;
+      margin: 0.5rem 0.16rem 0 0;
+      background: url("../images/ssjk.png");
+      background-position: center;
+      background-size: cover; }
+    .detailPage .level-1-title .title {
+      margin-top: 0.5rem; }
+  .detailPage .ssjk ul {
+    overflow: hidden;
+    color: #fff; }
+    .detailPage .ssjk ul li {
+      float: left;
+      width: 22.87%;
+      height: 1.58rem;
+      margin-right: 2.84%;
+      background: #FF7474;
+      box-shadow: 0 4px 8px 0 rgba(255, 116, 116, 0.3);
+      border-radius: 4px;
+      text-align: center; }
+      .detailPage .ssjk ul li:nth-child(2) {
+        background: #3BCBCA; }
+      .detailPage .ssjk ul li:nth-child(3) {
+        background: #6FBCEA; }
+      .detailPage .ssjk ul li:last-child {
+        margin-right: 0;
+        background: #6F92EA; }
+      .detailPage .ssjk ul li span {
+        float: left;
+        width: 100%; }
+        .detailPage .ssjk ul li span:first-child {
+          font-size: 0.24rem;
+          line-height: 0.24rem;
+          margin-top: 0.3rem; }
+        .detailPage .ssjk ul li span:last-child {
+          font-size: 0.36rem;
+          line-height: 0.36rem;
+          margin-top: 0.3rem; }
+  .detailPage .zrjy .icon {
+    background: url("../images/zrjy.png");
+    background-position: center;
+    background-size: cover; }
+  .detailPage .zrjy table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: 1px solid #EAEDF2; }
+    .detailPage .zrjy table tr, .detailPage .zrjy table td {
+      border: 1px solid #EAEDF2; }
+    .detailPage .zrjy table td span {
+      text-align: center;
+      font-size: 0.36rem;
+      display: inline-block;
+      float: left;
+      width: 100%; }
+      .detailPage .zrjy table td span:first-child {
+        font-size: 0.24rem;
+        color: #9FA4AC;
+        margin: 0.4rem 0 0.2rem; }
+      .detailPage .zrjy table td span:last-child {
+        margin-bottom: 0.4rem; }
+  .detailPage .view-rank {
+    height: 0.88rem;
+    line-height: 0.88rem;
+    text-align: center;
+    font-size: 0.28rem;
+    border-bottom: 1px solid #EAEDF2; }
+  .detailPage .lscm .icon {
+    background: url("../images/lscm.png");
+    background-position: center;
+    background-size: cover; }
+  .detailPage .lscm .level-2-title {
+    height: 0.28rem;
+    font-size: 0.28rem;
+    line-height: 0.28rem;
+    border-left: 4px solid #6FBCEA;
+    padding-left: 0.16rem;
+    margin: 0.24rem 0; }
+  .detailPage .lscm div.cont {
+    font-size: 0.26rem;
+    line-height: 0.4rem;
+    color: #9FA4AC; }
+  .detailPage .lscm .jzlzs {
+    overflow: hidden;
+    padding-bottom: 0.48rem;
+    border-bottom: 1px solid #EAEDF2; }
+    .detailPage .lscm .jzlzs img {
+      width: 39.88%;
+      height: 2rem;
+      float: left; }
+    .detailPage .lscm .jzlzs .content {
+      float: left;
+      width: 55.56%;
+      margin-left: 4.56%; }
+      .detailPage .lscm .jzlzs .content div.cont {
+        -webkit-line-clamp: 3;
+        /*超过三行打点*/ }
+  .detailPage .lscm .secondary-panel .level-2-title {
+    margin-top: 0.4rem; }
+  .detailPage .lscm .secondary-panel ul {
+    overflow: hidden;
+    margin-top: 0.2rem;
+    padding-bottom: 0.48rem;
+    border-bottom: 1px solid #EAEDF2; }
+    .detailPage .lscm .secondary-panel ul li {
+      float: left;
+      width: 31%;
+      height: 1.6rem;
+      margin-right: 3.5%; }
+      .detailPage .lscm .secondary-panel ul li:last-child {
+        margin-right: 0; }
+      .detailPage .lscm .secondary-panel ul li img {
+        width: 100%;
+        height: 100%; }
+  .detailPage .lscm .secondary-panel:last-child ul {
+    border-bottom: none; }
 
 /*# sourceMappingURL=pageStyle.css.map */

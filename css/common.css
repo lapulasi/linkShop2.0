@@ -56,7 +56,6 @@ div {
 .header {
   position: absolute;
   top: 0;
-  z-index: 2;
   width: 100%;
   height: 0.88rem;
   background: #fff; }
@@ -78,8 +77,11 @@ div {
   .header span.backMap {
     width: 0.64rem;
     height: 0.64rem;
-    margin: 0.12rem 0 0 3.2%;
-    float: left; }
+    margin-top: 0.12rem;
+    float: left;
+    background: url("../images/close.png");
+    background-position: center;
+    background-size: cover; }
 
 nav {
   width: 100%;
@@ -113,5 +115,17 @@ nav {
         background: url("../images/down_arrow.png");
         background-position: center;
         background-size: cover; }
+
+.single-line-omitted {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.multiple-omitted {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; }
 
 /*# sourceMappingURL=common.css.map */

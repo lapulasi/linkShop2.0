@@ -47,6 +47,38 @@ $borderColor: #EAEDF2;
   }
 }
 
+/*气泡的样式start*/
+.bubblePanle{
+  width: 36%;
+  p{
+    font-size: pxTorem($font_size12);
+    color: $fff;
+    line-height: pxTorem($font_size12);
+    margin-top: pxTorem(8px);
+    text-align: center;
+  }
+}
+.bubble {
+  width: pxTorem(40px);
+  height: pxTorem(44px);
+  line-height: pxTorem(40px);
+  font-size: pxTorem($font_size14);
+  color: $fff;
+  text-align: center;
+  display: table;
+  margin: 0 auto;
+}
+.pink-bubble {
+  @include backgroundImg("../images/pink.png")
+}
+.cyan-blue-bubble {
+  @include backgroundImg("../images/cyan-blue.png")
+}
+.purple-bubble {
+  @include backgroundImg("../images/purple.png")
+}
+/*气泡的样式end*/
+
 .mapPage {
   z-index: 2;
   width: 100%;
@@ -58,6 +90,7 @@ $borderColor: #EAEDF2;
     width: 100%;
   }
   .map-content {
+    pointer-events:none;
     position: absolute;
     top: pxTorem(88px);
     width: 100%;
@@ -104,30 +137,14 @@ $borderColor: #EAEDF2;
         }
       }
     }
-    .bubble {
-      width: pxTorem(40px);
-      height: pxTorem(44px);
-      line-height: pxTorem(40px);
-      font-size: pxTorem($font_size14);
-      color: $fff;
-      text-align: center;
-    }
-    .pink-bubble {
-      @include backgroundImg("../images/pink.png")
-    }
-    .cyan-blue-bubble {
-      @include backgroundImg("../images/cyan-blue.png")
-    }
-    .purple-bubble {
-      @include backgroundImg("../images/purple.png")
-    }
     .sortList {
       position: absolute;
       left: 3.2%;
       bottom: 12%;
       .sort {
         width: pxTorem(31px);
-        height: pxTorem(31px);
+        height: pxTorem(29px);
+        padding-top: pxTorem(2px);
         background: $pink;
         border-radius: pxTorem(5px);
         text-align: center;
@@ -179,10 +196,177 @@ $borderColor: #EAEDF2;
 }
 
 .detailPage {
+  background: $fff;
   z-index: 2;
   position: absolute;
   top: 100%;
-  width: 100%;
-  height: 1400px;
-  background: lightblue;
+  padding: 0 3.2% pxTorem(80px);
+  width: 93.6%;
+  .header{
+    width: 93.6%;
+  }
+  .level-1-title{
+    width:100%;
+    height: pxTorem(56px);
+    font-size: pxTorem($font_size16);
+    line-height: pxTorem($font_size16);
+    span{
+      float: left;
+    }
+    .icon{
+      float: left;
+      width: pxTorem(14px);
+      height: pxTorem(14px);
+      margin: pxTorem(25px) pxTorem(8px) 0 0;
+      @include backgroundImg("../images/ssjk.png");
+    }
+    .title{
+      margin-top: pxTorem(25px);
+    }
+  }
+  .ssjk{
+    ul{
+      overflow: hidden;
+      color: $fff;
+      li{
+        float: left;
+        width: 22.87%;
+        height: pxTorem(79px);
+        margin-right: 2.84%;
+        background: #FF7474;
+        box-shadow: 0 4px 8px 0 rgba(255,116,116,0.30);
+        border-radius: 4px;
+        text-align: center;
+        &:nth-child(2){
+          background: #3BCBCA;
+        }
+        &:nth-child(3){
+          background: #6FBCEA;
+        }
+        &:last-child{
+          margin-right: 0;
+          background: #6F92EA;
+        }
+        span{
+          float: left;
+          width: 100%;
+          &:first-child{
+            font-size: pxTorem($font_size12);
+            line-height: pxTorem($font_size12);
+            margin-top: pxTorem(15px);
+          }
+          &:last-child{
+            font-size: pxTorem($font_size18);
+            line-height: pxTorem($font_size18);
+            margin-top: pxTorem(15px);
+          }
+        }
+      }
+    }
+  }
+  .zrjy{
+    .icon{
+      @include backgroundImg("../images/zrjy.png");
+    }
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      @include border;
+
+      tr,td{
+        @include border;
+      }
+      td{
+        span{
+          text-align: center;
+          font-size: pxTorem($font_size18);
+          display: inline-block;
+          float: left;
+          width: 100%;
+          &:first-child{
+            font-size: pxTorem($font_size12);
+            color: $gray9;
+            margin: pxTorem(20px) 0 pxTorem(10px);
+          }
+          &:last-child{
+            margin-bottom: pxTorem(20px);
+          }
+        }
+      }
+    }
+  }
+  .view-rank{
+    height: pxTorem(44px);
+    line-height: pxTorem(44px);
+    text-align: center;
+    font-size: pxTorem($font_size14);
+    @include borderDir(bottom);
+  }
+  .lscm{
+    .icon{
+      @include backgroundImg("../images/lscm.png");
+    }
+    .level-2-title{
+      height: pxTorem(14px);
+      font-size: pxTorem($font_size14);
+      line-height: pxTorem($font_size14);
+      border-left: 4px solid #6FBCEA;
+      padding-left: pxTorem(8px);
+      margin: pxTorem(12px) 0;
+    }
+    div.cont{
+      font-size: pxTorem(13px);
+      line-height: pxTorem(20px);
+      color: $gray9;
+    }
+    .jzlzs{
+      overflow: hidden;
+      padding-bottom: pxTorem(24px);
+      @include borderDir(bottom);
+
+      img{
+        width: 39.88%;
+        height: pxTorem(100px);
+        float: left;
+      }
+      .content{
+        float: left;
+        width: 55.56%;
+        margin-left: 4.56%;
+        div.cont{
+          -webkit-line-clamp: 3;/*超过三行打点*/
+        }
+      }
+    }
+    .secondary-panel{
+      .level-2-title{
+        margin-top: pxTorem(20px);
+      }
+      ul{
+        overflow: hidden;
+        margin-top: pxTorem(10px);
+        padding-bottom: pxTorem(24px);
+        @include borderDir(bottom);
+        li{
+          float: left;
+          width: 31%;
+          height: pxTorem(80px);
+          margin-right: 3.5%;
+          &:last-child{
+            margin-right: 0;
+          }
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      &:last-child{
+        ul{
+          border-bottom: none;
+        }
+      }
+    }
+  }
 }
