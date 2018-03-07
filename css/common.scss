@@ -79,6 +79,7 @@ body {
   font-family: "Arial", "微软雅黑";
   color: $gray3;
   position: relative;
+  background: #f5f6f8;
 }
 
 div{
@@ -128,10 +129,11 @@ div{
       @include backgroundImg("../images/userIcon.png");
     }
     &.backMap{
+      position: absolute;
+      left: 0;
+      top: pxTorem(6px);
       width: pxTorem(32px);
       height: pxTorem(32px);
-      margin-top: pxTorem(6px);
-      float: left;
       @include backgroundImg("../images/close.png");
     }
   }
@@ -164,12 +166,19 @@ nav{
         box-sizing: border-box;
         @include borderDir(right);
       }
-      span.selectTab{
-        width: pxTorem(16px);
-        height: pxTorem(16px);
-        display: table;
-        margin: 0 auto;
-        @include backgroundImg("../images/down_arrow.png");
+      span{
+        &.selectTab{
+          width: pxTorem(16px);
+          height: pxTorem(16px);
+          display: table;
+          margin: 0 auto;
+        }
+        &.down-tips{
+          @include backgroundImg("../images/down_arrow.png");
+        }
+        &.up-tips{
+          @include backgroundImg("../images/up_arrow.png");
+        }
       }
     }
   }

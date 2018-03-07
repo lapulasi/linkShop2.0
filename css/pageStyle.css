@@ -9,7 +9,9 @@
 
 /*气泡的样式start*/
 .bubblePanle {
-  width: 36%; }
+  position: absolute;
+  /*插件需要*/
+  width: 2.7rem; }
   .bubblePanle p {
     font-size: 0.24rem;
     color: #fff;
@@ -42,15 +44,132 @@
   background-position: center;
   background-size: cover; }
 
+.pink-bubble-err {
+  background: url("../images/pink-err.png");
+  background-position: center;
+  background-size: cover; }
+
+.cyan-blue-bubble-err {
+  background: url("../images/cyan-blue-err.png");
+  background-position: center;
+  background-size: cover; }
+
+.purple-bubble-err {
+  background: url("../images/purple-err.png");
+  background-position: center;
+  background-size: cover; }
+
 /*气泡的样式end*/
 .mapPage {
-  z-index: 2;
   width: 100%;
   height: 100%; }
   .mapPage header {
     position: absolute;
     top: 0.88rem;
     width: 100%; }
+  .mapPage .drop-down {
+    position: absolute;
+    top: 1.76rem;
+    width: 100%;
+    z-index: 2;
+    background: #fff; }
+    .mapPage .drop-down li {
+      height: 0.88rem;
+      line-height: 0.88rem;
+      border-top: 1px solid #EAEDF2; }
+      .mapPage .drop-down li span {
+        font-size: 0.28rem;
+        float: left;
+        color: #5C626D; }
+        .mapPage .drop-down li span:first-child {
+          width: 0.28rem;
+          height: 0.2rem;
+          margin: 0.34rem 0.2rem 0 3.2%; }
+      .mapPage .drop-down li.current span:first-child {
+        background: url("../images/hook.png");
+        background-position: center;
+        background-size: cover; }
+      .mapPage .drop-down li.current span:last-child {
+        color: #24282C;
+        font-weight: bold; }
+  .mapPage .mask-layer {
+    position: absolute;
+    top: 1.76rem;
+    width: 100%;
+    height: calc(100% - 88px);
+    background: rgba(34, 31, 50, 0.6);
+    z-index: 4; }
+  .mapPage .weather-content {
+    width: 100%;
+    height: 2.78rem;
+    margin-top: 0.32rem;
+    position: absolute;
+    top: 1.76rem;
+    overflow: auto; }
+    .mapPage .weather-content .lab {
+      float: left;
+      width: 1.64rem;
+      height: 0.68rem;
+      text-align: center;
+      margin-left: 0.24rem;
+      background: #FFFFFF;
+      box-shadow: 0 2px 4px 0 rgba(159, 164, 172, 0.5);
+      border-radius: 12px;
+      overflow: auto; }
+      .mapPage .weather-content .lab span {
+        float: left;
+        display: table;
+        margin: 0 auto; }
+        .mapPage .weather-content .lab span:first-child {
+          font-size: 0.28rem;
+          line-height: 0.68rem;
+          margin-left: 0.26rem; }
+        .mapPage .weather-content .lab span.tips {
+          width: 0.32rem;
+          height: 0.32rem;
+          margin-top: 0.18rem;
+          margin-left: 0.16rem; }
+        .mapPage .weather-content .lab span.down-tips {
+          background: url("../images/down_arrow.png");
+          background-position: center;
+          background-size: cover; }
+        .mapPage .weather-content .lab span.up-tips {
+          background: url("../images/up_arrow.png");
+          background-position: center;
+          background-size: cover; }
+    .mapPage .weather-content .delete-raduis {
+      border-radius: 0.24rem 0.24rem 0 0; }
+    .mapPage .weather-content .lab-drop-down {
+      position: absolute;
+      left: 0.24rem;
+      top: 0.68rem;
+      width: 1.64rem;
+      background: #fff;
+      border-radius: 0 0 0.24rem 0.24rem; }
+      .mapPage .weather-content .lab-drop-down li {
+        padding-left: 0.26rem;
+        height: 0.68rem;
+        font-size: 0.28rem;
+        line-height: 0.68rem;
+        border-top: 1px solid #EAEDF2; }
+    .mapPage .weather-content .weather {
+      float: right;
+      margin-top: 0.1rem;
+      overflow: hidden; }
+      .mapPage .weather-content .weather img {
+        width: 0.6rem;
+        height: 0.44rem;
+        float: left;
+        margin-right: 0.2rem; }
+      .mapPage .weather-content .weather p {
+        font-size: 0.4rem;
+        color: #fff;
+        text-align: center;
+        float: right;
+        border-left: 2px solid #fff;
+        padding: 0 0.2rem; }
+        .mapPage .weather-content .weather p span {
+          font-size: 0.28rem; }
   .mapPage .map-content {
     pointer-events: none;
     position: absolute;
@@ -58,39 +177,6 @@
     width: 100%;
     height: calc(100% - 88px);
     clear: both; }
-    .mapPage .map-content .weather-content {
-      height: 0.68rem;
-      margin-top: 0.32rem;
-      position: relative; }
-      .mapPage .map-content .weather-content .lab {
-        float: left;
-        width: 1.08rem;
-        height: 0.68rem;
-        line-height: 0.68rem;
-        text-align: center;
-        font-size: 0.28rem;
-        margin-left: 0.24rem;
-        background: #FFFFFF;
-        box-shadow: 0 2px 4px 0 rgba(159, 164, 172, 0.5);
-        border-radius: 56px; }
-      .mapPage .map-content .weather-content .weather {
-        float: right;
-        margin-top: 0.1rem;
-        overflow: hidden; }
-        .mapPage .map-content .weather-content .weather img {
-          width: 0.6rem;
-          height: 0.44rem;
-          float: left;
-          margin-right: 0.2rem; }
-        .mapPage .map-content .weather-content .weather p {
-          font-size: 0.4rem;
-          color: #fff;
-          text-align: center;
-          float: right;
-          border-left: 2px solid #fff;
-          padding: 0 0.2rem; }
-          .mapPage .map-content .weather-content .weather p span {
-            font-size: 0.28rem; }
     .mapPage .map-content .sortList {
       position: absolute;
       left: 3.2%;
@@ -99,35 +185,131 @@
         width: 0.62rem;
         height: 0.58rem;
         padding-top: 0.04rem;
-        background: #FF7474;
         border-radius: 0.1rem;
         text-align: center;
         font-size: 0.2rem; }
         .mapPage .map-content .sortList .sort span {
-          line-height: 0.2rem; }
+          line-height: 0.28rem;
+          display: block; }
+      .mapPage .map-content .sortList .faultNum {
+        background: #221F32;
+        border: 1px solid #F5A623;
+        color: #fff; }
+      .mapPage .map-content .sortList .sortA {
+        background: #FF7474;
+        margin-top: 0.1rem; }
       .mapPage .map-content .sortList .sortB {
         background: #6F92EA;
         margin-top: 0.1rem; }
       .mapPage .map-content .sortList .sortC {
         background: #3BCBCA;
         margin-top: 0.1rem; }
-    .mapPage .map-content .notice {
-      width: 0.6rem;
-      height: 0.6rem;
+  .mapPage .notice {
+    width: 0.6rem;
+    height: 0.6rem;
+    position: absolute;
+    right: 3.2%;
+    background: url("../images/notice.png");
+    background-position: center;
+    background-size: cover; }
+    .mapPage .notice .tipsCircle {
+      width: 0.18rem;
+      height: 0.18rem;
+      border-radius: 50%;
+      background: #F43F36;
       position: absolute;
-      right: 3.2%;
-      bottom: 12%;
-      background: url("../images/notice.png");
-      background-position: center;
-      background-size: cover; }
-      .mapPage .map-content .notice .tipsCircle {
-        width: 0.18rem;
-        height: 0.18rem;
-        border-radius: 50%;
-        background: #F43F36;
-        position: absolute;
-        top: 0;
-        right: 0; }
+      top: 0;
+      right: 0; }
+  .mapPage .in-index {
+    bottom: 12%; }
+  .mapPage .in-content {
+    bottom: 30%; }
+  .mapPage .backParent {
+    position: absolute;
+    right: 3.2%;
+    bottom: 12%;
+    width: 1.32rem;
+    height: 1.32rem;
+    border-radius: 50%;
+    background: #3385FF;
+    box-shadow: 0 3px 6px 0 rgba(51, 133, 255, 0.5);
+    overflow: hidden; }
+    .mapPage .backParent span {
+      display: block;
+      color: #fff; }
+      .mapPage .backParent span:first-child {
+        width: 0.48rem;
+        height: 0.38rem;
+        margin: 0.2rem auto;
+        background: url("../images/back.png");
+        background-position: center;
+        background-size: cover; }
+      .mapPage .backParent span:last-child {
+        font-size: 0.28rem;
+        line-height: 0.28rem;
+        text-align: center; }
+  .mapPage .sub-buttle {
+    /*店铺泡泡*/
+    width: 64%;
+    height: 4.28rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -32%;
+    margin-top: -2.14rem;
+    z-index: 5; }
+    .mapPage .sub-buttle ul {
+      width: 2.8rem;
+      height: 2.8rem;
+      border-radius: 50%;
+      background: #fff;
+      text-align: center;
+      font-size: 0.28rem;
+      display: table;
+      margin: 0 auto; }
+      .mapPage .sub-buttle ul li:first-child {
+        color: #9FA4AC;
+        line-height: 0.28rem;
+        margin-top: 0.48rem; }
+      .mapPage .sub-buttle ul li:nth-child(2) {
+        font-size: 0.52rem;
+        line-height: 0.48rem;
+        font-weight: bold;
+        margin: 0.2rem 0; }
+      .mapPage .sub-buttle ul li:last-child {
+        width: 1.36rem;
+        font-size: 0.32rem;
+        line-height: 0.88rem;
+        color: #5C626D;
+        margin-left: 0.64rem;
+        border-top: 1px solid #EAEDF2; }
+    .mapPage .sub-buttle span {
+      position: absolute;
+      width: 1.12rem;
+      height: 1.12rem;
+      line-height: 1.12rem;
+      text-align: center;
+      border-radius: 50%;
+      font-size: 0.28rem;
+      background: #fff; }
+  .mapPage .shop-bubble span:first-child {
+    left: 0;
+    bottom: 0.74rem; }
+  .mapPage .shop-bubble span:nth-child(2) {
+    left: 1.86rem;
+    bottom: 0; }
+  .mapPage .shop-bubble span:last-child {
+    right: 0;
+    bottom: 0.74rem; }
+  .mapPage .quan-bubble span:first-child {
+    left: 0.56rem;
+    bottom: 0; }
+  .mapPage .quan-bubble span:last-child {
+    right: 0.56rem;
+    line-height: 0.36rem;
+    bottom: 0;
+    padding-top: 0.2rem;
+    height: 0.92rem; }
   .mapPage button.viewData {
     position: absolute;
     bottom: 0.24rem;
@@ -140,10 +322,31 @@
     background: #fff;
     box-shadow: 0 2px 4px 0 rgba(159, 164, 172, 0.5);
     border-radius: 0.1rem; }
+  .mapPage .camera {
+    position: absolute;
+    bottom: 0;
+    height: 1.04rem;
+    background: #fff;
+    padding: 0 3.2%;
+    width: 93.6%; }
+    .mapPage .camera p {
+      line-height: 1.04rem;
+      color: #5C626D;
+      float: left;
+      font-size: 0.32rem; }
+      .mapPage .camera p span {
+        color: #FF7474; }
+    .mapPage .camera span.right-tip {
+      float: right;
+      width: 0.14rem;
+      height: 0.24rem;
+      margin-top: 0.4rem;
+      background: url("../images/right-tip.png");
+      background-position: center;
+      background-size: cover; }
 
 .detailPage {
   background: #fff;
-  z-index: 2;
   position: absolute;
   top: 100%;
   padding: 0 3.2% 1.6rem;
@@ -275,5 +478,20 @@
         height: 100%; }
   .detailPage .lscm .secondary-panel:last-child ul {
     border-bottom: none; }
+
+.faulty-camera {
+  overflow: hidden; }
+  .faulty-camera ul {
+    margin-top: 0.2rem;
+    background: #fff;
+    width: 100%; }
+    .faulty-camera ul li {
+      padding: 0 3.7%;
+      height: 1rem;
+      line-height: 1rem;
+      font-size: 0.3rem;
+      border-bottom: 1px solid #EAEDF2; }
+      .faulty-camera ul li:last-child {
+        border-bottom: none; }
 
 /*# sourceMappingURL=pageStyle.css.map */
