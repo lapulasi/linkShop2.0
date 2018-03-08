@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3e85ae8-b465-40bc-a751-013f3b5a7f55" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/search.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/shop-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/time-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/heatMap.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/heatMap_compare.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/heatMap_shopCompare.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/common.css" afterPath="$PROJECT_DIR$/css/common.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/common.css.map" afterPath="$PROJECT_DIR$/css/common.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/common.scss" afterPath="$PROJECT_DIR$/css/common.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/pageStyle.css" afterPath="$PROJECT_DIR$/css/pageStyle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/pageStyle.css.map" afterPath="$PROJECT_DIR$/css/pageStyle.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/pageStyle.scss" afterPath="$PROJECT_DIR$/css/pageStyle.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/faultyCamera.html" afterPath="$PROJECT_DIR$/faulty-camera.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/heatMap.html" afterPath="$PROJECT_DIR$/heat-map.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/heatMap_compare.html" afterPath="$PROJECT_DIR$/heat-map-compare.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/heatMap_shopCompare.html" afterPath="$PROJECT_DIR$/heat-map-shop-compare.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -69,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="faultyCamera.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/faultyCamera.html">
+      <file leaf-file-name="faulty-camera.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/faulty-camera.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
-              <caret line="23" column="10" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="23" selection-end-column="10" />
+              <caret line="23" column="10" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="23" selection-end-column="10" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -100,11 +89,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="heatMap.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/heatMap.html">
+      <file leaf-file-name="heat-map.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/heat-map.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
-              <caret line="54" column="6" lean-forward="true" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
+              <caret line="54" column="6" lean-forward="false" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -117,8 +106,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="heatMap_compare.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/heatMap_compare.html">
+      <file leaf-file-name="heat-map-compare.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/heat-map-compare.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
               <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="71" selection-end-column="10" />
@@ -139,11 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="heatMap_shopCompare.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/heatMap_shopCompare.html">
+      <file leaf-file-name="heat-map-shop-compare.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/heat-map-shop-compare.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
-              <caret line="29" column="10" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="29" selection-end-column="10" />
+              <caret line="29" column="10" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="29" selection-end-column="10" />
               <folding>
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -318,18 +307,17 @@
       <workItem from="1520215230051" duration="9758000" />
       <workItem from="1520302099328" duration="20027000" />
       <workItem from="1520387346916" duration="20667000" />
-      <workItem from="1520472470525" duration="15954000" />
+      <workItem from="1520472470525" duration="16030000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88363000" />
+    <option name="totallyTimeSpent" value="88439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24968314" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24968314" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -391,7 +379,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/faultyCamera.html">
+    <entry file="file://$PROJECT_DIR$/faulty-camera.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
@@ -763,10 +751,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/heatMap.html">
+    <entry file="file://$PROJECT_DIR$/heat-map.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
-          <caret line="54" column="6" lean-forward="true" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
+          <caret line="54" column="6" lean-forward="false" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -778,7 +766,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/heatMap_compare.html">
+    <entry file="file://$PROJECT_DIR$/heat-map-compare.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="71" selection-end-column="10" />
@@ -798,20 +786,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/heatMap_shopCompare.html">
+    <entry file="file://$PROJECT_DIR$/heat-map-shop-compare.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
-          <caret line="29" column="10" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="29" selection-end-column="10" />
+          <caret line="29" column="10" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="29" selection-end-column="10" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/faultyCamera.html">
+    <entry file="file://$PROJECT_DIR$/faulty-camera.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
-          <caret line="23" column="10" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="23" selection-end-column="10" />
+          <caret line="23" column="10" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="23" selection-end-column="10" />
           <folding>
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
