@@ -159,6 +159,7 @@ nav{
       font-size:pxTorem($font_size16);
       &.current{
         color: $gray3;
+        font-weight: bold;
       }
       &:first-child{
         height: pxTorem(16px);

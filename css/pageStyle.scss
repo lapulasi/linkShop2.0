@@ -22,6 +22,7 @@ $pink: #FF7474;
 $perple: #6F92EA;
 $cyanBlue: #3BCBCA;
 $borderColor: #EAEDF2;
+$blue: #6F92EA;
 
 @mixin backgroundImg($url) {
   background: url($url);
@@ -35,6 +36,11 @@ $borderColor: #EAEDF2;
 
 @mixin borderDir($dir, $color: $borderColor) {
   border-#{$dir}: 1px solid $color;
+}
+
+@mixin font($size: $font_size14, $height: $font_size14) {
+  font-size: $size;
+  line-height: $height;
 }
 
 .index {
@@ -241,39 +247,40 @@ $borderColor: #EAEDF2;
     height: calc(100% - 88px);
     clear: both;
 
-    .sortList {
-      position: absolute;
-      left: 3.2%;
-      bottom: 12%;
-      .sort {
-        width: pxTorem(31px);
-        height: pxTorem(29px);
-        padding-top: pxTorem(2px);
-        border-radius: pxTorem(5px);
-        text-align: center;
-        font-size: pxTorem(10px);
-        span {
-          line-height: pxTorem(14px);
-          display: block;
-        }
+
+  }
+  .sortList {
+    position: absolute;
+    left: 3.2%;
+    bottom: 12%;
+    .sort {
+      width: pxTorem(31px);
+      height: pxTorem(29px);
+      padding-top: pxTorem(2px);
+      border-radius: pxTorem(5px);
+      text-align: center;
+      font-size: pxTorem(10px);
+      span {
+        line-height: pxTorem(14px);
+        display: block;
       }
-      .faultNum{
-        background: #221F32;
-        border: 1px solid #F5A623;
-        color: $fff;
-      }
-      .sortA {
-        background: $pink;
-        margin-top: pxTorem(5px);
-      }
-      .sortB {
-        background: $perple;
-        margin-top: pxTorem(5px);
-      }
-      .sortC {
-        background: $cyanBlue;
-        margin-top: pxTorem(5px);
-      }
+    }
+    .faultNum{
+      background: #221F32;
+      border: 1px solid #F5A623;
+      color: $fff;
+    }
+    .sortA {
+      background: $pink;
+      margin-top: pxTorem(5px);
+    }
+    .sortB {
+      background: $perple;
+      margin-top: pxTorem(5px);
+    }
+    .sortC {
+      background: $cyanBlue;
+      margin-top: pxTorem(5px);
     }
   }
   .notice {
@@ -634,6 +641,213 @@ $borderColor: #EAEDF2;
       @include borderDir(bottom);
       &:last-child{
         border-bottom: none;
+      }
+    }
+  }
+}
+.shop-compare{
+  overflow: auto;
+  .search{
+    width: 94.6%;
+    height: pxTorem(30px);
+    border-radius: 4px;
+    margin: pxTorem(7px) 2.7%;
+    background: $fff;
+    div{
+      display: table;
+      margin: 0 auto;
+      .search-icon{
+        width: pxTorem(14px);
+        height: pxTorem(14px);
+        float: left;
+        margin-top: pxTorem(8px);
+        @include backgroundImg("../images/search.png");
+      }
+      span:last-child{
+        float: right;
+        margin-left: pxTorem(10px);
+        line-height: pxTorem(30px);
+        color: #BFC4CB;
+        font-size: pxTorem($font_size14);
+      }
+    }
+  }
+  ul{
+    background: $fff;
+    width: 100%;
+    li{
+      height: pxTorem(44px);
+      @include borderDir(bottom);
+      font-size: pxTorem($font_size14);
+      line-height: pxTorem(44px);
+      color: $gray6;
+      padding: 0 3.7%;
+      &:last-child{
+        border-bottom: 0;
+      }
+    }
+  }
+}
+.heat-map-compare{
+  .choose-time{
+    font-size: pxTorem($font_size14);
+    line-height: pxTorem(44px);
+    color: $gray9;
+    position: relative;
+    padding: 0 3.7%;
+    background: $fff;
+    text-align: center;
+    span{
+      &.title{
+        position: absolute;
+        right: 3.7%;
+        font-size: pxTorem($font_size16);
+        color: $blue;
+      }
+    }
+  }
+  .compare-time{
+    float: left;
+    @include font($font_size14, 44px);
+    span{
+      &:first-child{
+        @include font($font_size16, $font_size16);
+        color: $gray6;
+        margin-right: pxTorem(8px);
+      }
+    }
+  }
+  .map-one, .map-two{
+    width: 100%;
+    background: $fff;
+    padding-bottom: pxTorem(20px);
+    img{
+      width: 92.6%;
+      height: pxTorem(180px);
+      margin: 0 3.7%;
+    }
+  }
+  .map-two{
+    margin: pxTorem(10px) 0 pxTorem(20px);
+  }
+  .add-compare{
+    width: 92.6%;
+    padding: 0 3.7%;
+    height: pxTorem(162px);
+    background: $fff;
+    margin-top: pxTorem(10px);
+    overflow: hidden;
+    p{
+      @include font($font_size16, $font_size16);
+      color: $gray6;
+      margin: pxTorem(20px) 0 pxTorem(16px);
+    }
+    ul{
+      overflow: hidden;
+      li{
+        width: 48.4%;
+        float: left;
+        height: pxTorem(80px);
+        background: $pink;
+        box-shadow: 0 4px 8px 0 rgba(111,146,234,0.40);
+        border-radius: 4px;
+        &:first-child{
+          margin-right: 3.2%;
+          background: $perple;
+        }
+        .icon{
+          width: pxTorem(36px);
+          height: pxTorem(36px);
+          margin: pxTorem(22px) pxTorem(12px) 0 pxTorem(28px);
+        }
+        .time-icon{
+          @include backgroundImg("../images/time-icon.png");
+        }
+        .shop-icon{
+          @include backgroundImg("../images/shop-icon.png");
+        }
+        span{
+          float: left;
+          &:last-child{
+            @include font($font_size16, 80px);
+            color: $fff;
+          }
+        }
+      }
+    }
+  }
+}
+.progress{
+  width: 92.6%;
+  padding: 0 3.7%;
+  background: $fff;
+  p{
+    @include font($font_size14, $font_size14);
+    color: $gray6;
+    padding-top: pxTorem(20px);
+  }
+  .progress-bar{
+    width: 100%;
+    height: pxTorem(20px);
+    position: relative;
+    margin-top: pxTorem(10px);
+    .full-bar{
+      width: 100%;
+      height: pxTorem(6px);
+      background: #EBEDF2;
+      border-radius: 8px;
+      position: absolute;
+      top: pxTorem(7px);
+    }
+    .scroll-bar{
+      height: pxTorem(6px);
+      background: #83AFFF;
+      border-radius: 8px;
+      position: absolute;
+      top: pxTorem(7px);
+    }
+    .local{
+      position: absolute;
+      left: -5px;
+      top: 0;
+      width: 30px;
+      height: 20px;
+      .percent{
+        width: 30px;
+        height: 18px;
+        background: #4280F2;
+        border-radius: 2px;
+        position: absolute;
+        top: -25px;
+        font-size: 11px;
+        text-align: center;
+        line-height: 18px;
+        color: $fff;
+      }
+      .percent:after{
+        content: ' ';
+        position: absolute;
+        background: transparent;
+        width: 0;
+        border: 0;
+        left: 11px;
+        bottom: -3px;
+        z-index: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid #4280F2;
+      }
+      .circle{
+        position: absolute;
+        left: 5px;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        border: 6px solid #4280F2;
+        background: $fff;
+        box-shadow: 0 2px 4px 0 rgba(66,128,242,0.50);
       }
     }
   }

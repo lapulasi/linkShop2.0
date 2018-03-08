@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对比热力图</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1, minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pageStyle.css">
+</head>
+<body>
+<div class="heat-map-compare">
+    <div class="map-one">
+        <div class="choose-time">
+            <span>2018年2月-2018年3月</span>
+            <span class="title">选择日期</span>
+        </div>
+        <img src="images/1.png" alt="">
+        <div class="progress">
+            <p>值域</p>
+            <div class="progress-bar">
+                <div class="full-bar"></div>
+                <div class="scroll-bar" style="width: 0%"></div>
+                <div class="local">
+                    <div class="percent hide">50%</div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+        <div class="progress">
+            <p>透明度</p>
+            <div class="progress-bar">
+                <div class="full-bar"></div>
+                <div class="scroll-bar" style="width: 50%"></div>
+                <div class="local" style="left: calc(50% - 15px)">
+                    <div class="percent">50%</div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="add-compare">
+        <p>添加对比</p>
+        <ul>
+            <li>
+                <span class="icon time-icon"></span>
+                <span>时段对比</span>
+            </li>
+            <li>
+                <span class="icon shop-icon"></span>
+                <span>门店对比</span>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/fontSize.js"></script>
+</body>
+</html>

@@ -103,7 +103,8 @@ nav {
       text-align: center;
       font-size: 0.32rem; }
       nav ul li.current {
-        color: #24282C; }
+        color: #24282C;
+        font-weight: bold; }
       nav ul li:first-child {
         height: 0.32rem;
         margin-top: 0.28rem;
