@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1, minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/common.css">
+    <!--<link rel="stylesheet" href="css/pageStyle.css">-->
+    <script src="js/echarts.min.js"></script>
+    <style>
+        .content{
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+        #main{
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div id="main"></div>
+    </div>
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="js/fontSize.js"></script>
+<script src="js/slide.js"></script>
+<script>
+    var myChart1 = echarts.init(document.getElementById('main'));
+    // 指定图表的配置项和数据
+    var option1 = {
+        title: {
+            text: 'ECharts 入门示例'
+        },
+        tooltip: {},
+        legend: {
+            data:['销量']
+        },
+        xAxis: {
+            data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+        },
+        yAxis: {},
+        series: [{
+            name: '销量',
+            type: 'bar',
+            data: [5, 20, 36, 10, 10, 20]
+        }]
+    };
+    myChart1.setOption(option1);
+
+    var ele = document.getElementById("main");
+    var mySlip = Slip(ele, "xy");
+
+    mySlip
+        .start(function(event) {
+            console.log('start');
+
+            // 事件对象
+            console.log(event);
+            // 当前坐标值
+            console.log(this.coord);
+        })
+        .move(function(event) {
+            console.log('move');
+        })
+        .end(function() {
+            console.log('end');
+            console.log(this.coord);
+
+            // 滑动方向
+            console.log(this.orient);
+        });
+</script>
+</body>
+</html>

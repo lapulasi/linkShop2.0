@@ -104,72 +104,74 @@
     height: 2.78rem;
     margin-top: 0.32rem;
     position: absolute;
-    top: 1.76rem;
+    top: 1.76rem; }
+  .mapPage .lab {
+    position: absolute;
+    left: 0.24rem;
+    top: 2.08rem;
+    width: 1.96rem;
+    height: 0.68rem;
+    text-align: center;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(159, 164, 172, 0.5);
+    border-radius: 12px;
     overflow: auto; }
-    .mapPage .weather-content .lab {
+    .mapPage .lab span {
       float: left;
-      width: 1.64rem;
-      height: 0.68rem;
-      text-align: center;
-      margin-left: 0.24rem;
-      background: #FFFFFF;
-      box-shadow: 0 2px 4px 0 rgba(159, 164, 172, 0.5);
-      border-radius: 12px;
-      overflow: auto; }
-      .mapPage .weather-content .lab span {
-        float: left;
-        display: table;
-        margin: 0 auto; }
-        .mapPage .weather-content .lab span:first-child {
-          font-size: 0.28rem;
-          line-height: 0.68rem;
-          margin-left: 0.26rem; }
-        .mapPage .weather-content .lab span.tips {
-          width: 0.32rem;
-          height: 0.32rem;
-          margin-top: 0.18rem;
-          margin-left: 0.16rem; }
-        .mapPage .weather-content .lab span.down-tips {
-          background: url("../images/down_arrow.png");
-          background-position: center;
-          background-size: cover; }
-        .mapPage .weather-content .lab span.up-tips {
-          background: url("../images/up_arrow.png");
-          background-position: center;
-          background-size: cover; }
-    .mapPage .weather-content .delete-raduis {
-      border-radius: 0.24rem 0.24rem 0 0; }
-    .mapPage .weather-content .lab-drop-down {
-      position: absolute;
-      left: 0.24rem;
-      top: 0.68rem;
-      width: 1.64rem;
-      background: #fff;
-      border-radius: 0 0 0.24rem 0.24rem; }
-      .mapPage .weather-content .lab-drop-down li {
-        padding-left: 0.26rem;
-        height: 0.68rem;
+      display: table;
+      margin: 0 auto; }
+      .mapPage .lab span:first-child {
         font-size: 0.28rem;
         line-height: 0.68rem;
-        border-top: 1px solid #EAEDF2; }
-    .mapPage .weather-content .weather {
-      float: right;
-      margin-top: 0.1rem;
-      overflow: hidden; }
-      .mapPage .weather-content .weather img {
-        width: 0.6rem;
-        height: 0.44rem;
-        float: left;
-        margin-right: 0.2rem; }
-      .mapPage .weather-content .weather p {
-        font-size: 0.4rem;
-        color: #fff;
-        text-align: center;
+        margin-left: 0.26rem; }
+      .mapPage .lab span.tips {
         float: right;
-        border-left: 2px solid #fff;
-        padding: 0 0.2rem; }
-        .mapPage .weather-content .weather p span {
-          font-size: 0.28rem; }
+        width: 0.16rem;
+        height: 0.12rem;
+        margin-top: 0.28rem;
+        margin-right: 0.26rem; }
+      .mapPage .lab span.down-tips {
+        background: url("../images/down-tip-s.png");
+        background-position: center;
+        background-size: cover; }
+      .mapPage .lab span.up-tips {
+        background: url("../images/up-tip-s.png");
+        background-position: center;
+        background-size: cover; }
+  .mapPage .delete-raduis {
+    border-radius: 0.24rem 0.24rem 0 0; }
+  .mapPage .lab-drop-down {
+    position: absolute;
+    left: 0.24rem;
+    top: 2.76rem;
+    width: 1.96rem;
+    background: #fff;
+    border-radius: 0 0 0.24rem 0.24rem; }
+    .mapPage .lab-drop-down li {
+      padding-left: 0.26rem;
+      height: 0.68rem;
+      font-size: 0.28rem;
+      line-height: 0.68rem;
+      border-top: 1px solid #EAEDF2; }
+  .mapPage .weather {
+    position: absolute;
+    top: 2.18rem;
+    right: 0.24rem;
+    overflow: hidden; }
+    .mapPage .weather img {
+      width: 0.6rem;
+      height: 0.44rem;
+      float: left;
+      margin-right: 0.2rem; }
+    .mapPage .weather p {
+      font-size: 0.4rem;
+      color: #fff;
+      text-align: center;
+      float: right;
+      border-left: 2px solid #fff;
+      padding: 0 0.2rem; }
+      .mapPage .weather p span {
+        font-size: 0.28rem; }
   .mapPage .map-content {
     pointer-events: none;
     position: absolute;
@@ -251,13 +253,19 @@
   .mapPage .sub-buttle {
     /*店铺泡泡*/
     width: 64%;
-    height: 4.28rem;
+    height: 5.16rem;
     position: absolute;
     left: 50%;
     top: 50%;
     margin-left: -32%;
-    margin-top: -2.14rem;
+    margin-top: -2.58rem;
     z-index: 5; }
+    .mapPage .sub-buttle p {
+      height: 0.88rem;
+      text-align: center;
+      color: #fff;
+      font-size: 16px;
+      line-height: 44px; }
     .mapPage .sub-buttle ul {
       width: 2.8rem;
       height: 2.8rem;
@@ -674,5 +682,553 @@
         border: 6px solid #4280F2;
         background: #fff;
         box-shadow: 0 2px 4px 0 rgba(66, 128, 242, 0.5); }
+
+.regional .nav, .regional .time-range {
+  overflow: hidden;
+  height: 0.88rem;
+  background: #fff; }
+  .regional .nav li, .regional .time-range li {
+    width: 25%;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    line-height: 42px;
+    color: #9FA4AC; }
+    .regional .nav li span, .regional .time-range li span {
+      line-height: 42px;
+      display: block; }
+      .regional .nav li span:first-child, .regional .time-range li span:first-child {
+        width: 100%; }
+      .regional .nav li span:last-child, .regional .time-range li span:last-child {
+        width: 0.4rem;
+        height: 0;
+        border-top: 2px solid #fff;
+        margin: 0 auto; }
+    .regional .nav li.current, .regional .time-range li.current {
+      color: #24282C; }
+      .regional .nav li.current span:last-child, .regional .time-range li.current span:last-child {
+        border-top: 2px solid #24282C; }
+.regional .time-range {
+  margin-top: 0.2rem;
+  border-bottom: 1px solid #EAEDF2; }
+  .regional .time-range li {
+    width: 33.33%;
+    box-sizing: border-box;
+    border-right: 1px solid #EAEDF2; }
+    .regional .time-range li:last-child {
+      border-right: 0; }
+.regional .select-time {
+  height: 44px;
+  background: #fff; }
+  .regional .select-time ul {
+    display: table;
+    margin: 0 auto; }
+    .regional .select-time ul li {
+      float: left; }
+      .regional .select-time ul li.icon {
+        width: 0.24rem;
+        height: 0.32rem;
+        margin-top: 0.28rem; }
+      .regional .select-time ul li:first-child {
+        background: url("../images/left-tips.png");
+        background-position: center;
+        background-size: cover; }
+      .regional .select-time ul li:last-child {
+        float: right;
+        background: url("../images/right-tips.png");
+        background-position: center;
+        background-size: cover; }
+      .regional .select-time ul li:nth-child(2) {
+        text-align: center;
+        font-size: 18px;
+        line-height: 44px;
+        margin: 0 0.8rem; }
+.regional .list {
+  background: #fff; }
+  .regional .list li {
+    padding: 0 3.7%;
+    height: 0.88rem;
+    border-bottom: 1px solid #EAEDF2; }
+    .regional .list li:last-child {
+      border-bottom: 0; }
+    .regional .list li span {
+      float: left;
+      font-size: 14px;
+      line-height: 44px;
+      color: #5C626D; }
+      .regional .list li span:first-child {
+        width: 0.4rem;
+        height: 0.4rem;
+        border-radius: 50%;
+        margin: 0.22rem 0.4rem 0 0;
+        font-size: 14px;
+        line-height: 20px;
+        color: #9FA4AC;
+        text-align: center; }
+      .regional .list li span.pink {
+        background: #FF7474;
+        color: #fff;
+        box-shadow: 0 2px 4px 0 rgba(255, 116, 116, 0.5); }
+      .regional .list li span.yellow {
+        background: #FFB257;
+        color: #fff;
+        box-shadow: 0 2px 4px 0 rgba(255, 178, 87, 0.5); }
+      .regional .list li span.purple {
+        background: #AE6FEA;
+        color: #fff;
+        box-shadow: 0 2px 4px 0 rgba(174, 111, 234, 0.5); }
+      .regional .list li span:last-child {
+        float: right;
+        color: #24282C;
+        font-weight: bold; }
+.regional .content {
+  background: #fff;
+  margin-top: 0.2rem; }
+  .regional .content .fleeing {
+    overflow: hidden;
+    padding: 0 3.7%;
+    border-bottom: 1px solid #EAEDF2; }
+    .regional .content .fleeing .fleeNum {
+      font-size: 14px;
+      line-height: 44px; }
+  .regional .content .flee-panel {
+    position: relative; }
+  .regional .content .filter {
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 2; }
+    .regional .content .filter p.title {
+      font-size: 13px;
+      line-height: 13px;
+      color: #9FA4AC;
+      margin-top: 0.3rem;
+      padding: 0 3.7%; }
+    .regional .content .filter ul {
+      width: 92.6%;
+      padding: 0 3.7%;
+      overflow: hidden; }
+      .regional .content .filter ul li {
+        width: 31%;
+        float: left;
+        box-sizing: border-box;
+        border: 1px solid #EAEDF2;
+        border-radius: 3px;
+        font-size: 13px;
+        line-height: 30px;
+        color: #5C626D;
+        text-align: center;
+        margin: 0.2rem 3.5% 0 0; }
+        .regional .content .filter ul li:nth-child(3n) {
+          margin-right: 0; }
+        .regional .content .filter ul li.select {
+          border-color: #6F92EA;
+          color: #6F92EA;
+          background: rgba(111, 146, 234, 0.1); }
+        .regional .content .filter ul li:last-child {
+          margin-bottom: 0.1rem; }
+    .regional .content .filter .buttons {
+      width: 92.6%;
+      padding: 0 3.7%;
+      background: #F5F6F8;
+      height: 0.96rem; }
+      .regional .content .filter .buttons button {
+        width: 1.32rem;
+        height: 0.6rem;
+        font-size: 13px;
+        line-height: 30px;
+        border: 1px solid #EAEDF2;
+        color: #5C626D;
+        text-align: center;
+        border-radius: 3px;
+        float: left;
+        margin-top: 0.16rem; }
+        .regional .content .filter .buttons button:last-child {
+          float: right; }
+        .regional .content .filter .buttons button.select {
+          background: #6F92EA;
+          border-color: #6F92EA;
+          color: #fff; }
+.regional .down-up-tips span {
+  float: left;
+  color: #5C626D; }
+  .regional .down-up-tips span.icon {
+    width: 0.16rem;
+    height: 0.1rem;
+    margin: 0.4rem 0 0 0.1rem; }
+  .regional .down-up-tips span.down-tips {
+    background: url("../images/down-tip-s.png");
+    background-position: center;
+    background-size: cover; }
+  .regional .down-up-tips span.up-tips {
+    background: url("../images/up-tip-s.png");
+    background-position: center;
+    background-size: cover; }
+  .regional .down-up-tips span.down-tips-s {
+    background: url("../images/down-tip-s-c.png");
+    background-position: center;
+    background-size: cover; }
+  .regional .down-up-tips span.up-tips-s {
+    background: url("../images/up-tip-s-c.png");
+    background-position: center;
+    background-size: cover; }
+.regional .content-mask:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background: #000000;
+  position: absolute;
+  bottom: 0; }
+.regional .search {
+  width: 2.16rem;
+  height: 0.6rem;
+  background: #EAEDF2;
+  border-radius: 31px;
+  float: right;
+  margin-top: 0.14rem; }
+  .regional .search ul {
+    display: table;
+    margin: 0 auto; }
+    .regional .search ul li {
+      font-size: 14px;
+      line-height: 30px;
+      color: #BFC4CB;
+      float: left; }
+      .regional .search ul li:first-child {
+        width: 0.28rem;
+        height: 0.28rem;
+        margin: 0.16rem 0.12rem 0 0;
+        background: url("../images/search.png");
+        background-position: center;
+        background-size: cover; }
+.regional .rank-list {
+  margin-top: 0.2rem; }
+  .regional .rank-list li span:first-child {
+    margin-right: 8%; }
+  .regional .rank-list li span:nth-child(2) {
+    width: 64.6%;
+    text-align: center; }
+  .regional .rank-list li span:last-child {
+    width: 20%;
+    text-align: right;
+    font-weight: inherit; }
+  .regional .rank-list li.title span:first-child {
+    color: #24282C;
+    font-weight: bold;
+    margin-right: 0;
+    width: 15%;
+    text-align: left; }
+  .regional .rank-list li.your-rank span {
+    color: #6F92EA; }
+    .regional .rank-list li.your-rank span.blue {
+      background: #6F92EA;
+      box-shadow: 0 2px 4px 0 rgba(111, 146, 234, 0.5);
+      color: #fff; }
+.regional .search-page {
+  height: 0.88rem;
+  background: #EAEDF2; }
+  .regional .search-page .search {
+    width: 80%;
+    border-radius: 5px;
+    float: left;
+    background: #fff;
+    margin-left: 3.7%; }
+    .regional .search-page .search ul {
+      float: left;
+      width: 100%;
+      margin-left: 0.2rem; }
+      .regional .search-page .search ul li:last-child {
+        width: 90%; }
+        .regional .search-page .search ul li:last-child input {
+          width: 100%;
+          height: 0.52rem; }
+  .regional .search-page p {
+    float: right;
+    font-size: 16px;
+    line-height: 44px;
+    color: #5C626D;
+    margin-right: 3.7%; }
+.regional .search-list ul {
+  width: 100%;
+  background: #fff; }
+  .regional .search-list ul li {
+    padding: 0 3.7%;
+    border-bottom: 1px solid #EAEDF2;
+    height: 0.88rem; }
+    .regional .search-list ul li span:first-child {
+      float: left;
+      font-size: 13px;
+      line-height: 44px; }
+    .regional .search-list ul li span:last-child {
+      width: 0.4rem;
+      height: 0.4rem;
+      float: right;
+      margin-top: 0.22rem;
+      background: url("../images/search-close.png");
+      background-position: center;
+      background-size: cover; }
+.regional .search-list .clear {
+  height: 0.88rem;
+  background: #fff; }
+  .regional .search-list .clear div {
+    display: table;
+    margin: 0 auto; }
+    .regional .search-list .clear div span {
+      float: left; }
+      .regional .search-list .clear div span:first-child {
+        width: 0.28rem;
+        height: 0.3rem;
+        margin-top: 0.28rem;
+        background: url("../images/ico_clear.png");
+        background-position: center;
+        background-size: cover; }
+      .regional .search-list .clear div span:last-child {
+        font-size: 14px;
+        line-height: 44px;
+        color: #9FA4AC;
+        margin-left: 0.12rem; }
+
+.overview {
+  padding-bottom: 0.8rem; }
+  .overview .overall-data {
+    height: 1.78rem;
+    background: #fff;
+    overflow: hidden; }
+    .overview .overall-data ul {
+      width: 49.5%;
+      float: left; }
+      .overview .overall-data ul li {
+        text-align: center;
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: bold; }
+        .overview .overall-data ul li:first-child {
+          font-size: 14px;
+          line-height: 14px;
+          color: #9FA4AC;
+          margin: 0.32rem 0 0.3rem;
+          font-weight: inherit; }
+    .overview .overall-data .col-split {
+      width: 0;
+      height: 0.92rem;
+      float: left;
+      border-right: 1px solid #EAEDF2;
+      margin-top: 0.42rem; }
+  .overview .quadrant {
+    height: 4rem;
+    background: #fff;
+    overflow: hidden;
+    margin-top: 0.2rem; }
+    .overview .quadrant .tick {
+      height: 0.4rem;
+      overflow: hidden;
+      padding: 0.34rem 0 0.2rem;
+      margin-top: 0.2rem; }
+      .overview .quadrant .tick li {
+        float: left;
+        width: 20%;
+        text-align: center;
+        font-size: 14px;
+        line-height: 20px;
+        color: #9FA4AC; }
+    .overview .quadrant .quadrant-map {
+      width: 84.6%;
+      height: 2.1rem;
+      margin: 0 auto;
+      background: url("../images/sft.png");
+      background-position: center;
+      background-size: cover;
+      position: relative; }
+      .overview .quadrant .quadrant-map li {
+        position: absolute;
+        font-size: 14px;
+        line-height: 16px;
+        color: #5C626D;
+        width: 1.6rem;
+        height: 0.32rem;
+        text-align: center; }
+        .overview .quadrant .quadrant-map li.min {
+          left: -10.3%;
+          bottom: -0.4rem; }
+        .overview .quadrant .quadrant-map li.one-four {
+          left: 14%;
+          bottom: 0.04rem; }
+        .overview .quadrant .quadrant-map li.middle {
+          left: 37%;
+          bottom: 0.56rem; }
+        .overview .quadrant .quadrant-map li.three-four {
+          left: 61%;
+          bottom: 0.04rem; }
+        .overview .quadrant .quadrant-map li.max {
+          left: 85%;
+          bottom: -0.4rem; }
+  .overview .three-ranking {
+    margin-top: 0.2rem;
+    background: #fff; }
+    .overview .three-ranking .title {
+      height: 0.84rem;
+      border-bottom: 1px solid #EAEDF2;
+      padding: 0 3.7%; }
+      .overview .three-ranking .title span {
+        float: left; }
+        .overview .three-ranking .title span.icon {
+          width: 0.32rem;
+          height: 0.28rem;
+          margin-top: 0.28rem; }
+        .overview .three-ranking .title span.top3 {
+          background: url("../images/top3.png");
+          background-position: center;
+          background-size: cover; }
+        .overview .three-ranking .title span.last3 {
+          background: url("../images/last3.png");
+          background-position: center;
+          background-size: cover; }
+        .overview .three-ranking .title span.flux3 {
+          background: url("../images/flux3.png");
+          background-position: center;
+          background-size: cover; }
+        .overview .three-ranking .title span:last-child {
+          font-size: 14px;
+          line-height: 42px;
+          color: #9FA4AC;
+          margin-left: 0.16rem; }
+    .overview .three-ranking ul {
+      padding-left: 3.7%; }
+      .overview .three-ranking ul li {
+        border-bottom: 1px solid #EAEDF2;
+        overflow: hidden;
+        padding-right: 3.7%; }
+        .overview .three-ranking ul li:last-child {
+          border-bottom: 0; }
+        .overview .three-ranking ul li i {
+          float: left; }
+          .overview .three-ranking ul li i:first-child {
+            font-size: 14px;
+            line-height: 42px;
+            color: #9FA4AC;
+            font-weight: bold; }
+        .overview .three-ranking ul li span {
+          font-size: 14px;
+          line-height: 42px;
+          color: #5C626D; }
+          .overview .three-ranking ul li span:nth-child(2) {
+            float: left;
+            margin-left: 0.28rem; }
+          .overview .three-ranking ul li span:last-child {
+            float: right;
+            font-size: 15px;
+            line-height: 42px;
+            font-weight: bold;
+            color: #24282C; }
+
+.competitive .tab-title {
+  height: 0.88rem;
+  background: #fff;
+  overflow: hidden;
+  margin-top: 0.2rem;
+  border-bottom: 1px solid #EAEDF2; }
+  .competitive .tab-title ul {
+    height: 20px;
+    margin: 0.24rem auto; }
+    .competitive .tab-title ul li {
+      width: 33.33%;
+      box-sizing: border-box;
+      border-right: 1px solid #EAEDF2;
+      float: left;
+      color: #5C626D; }
+      .competitive .tab-title ul li div {
+        display: table;
+        margin: 0 auto; }
+        .competitive .tab-title ul li div span {
+          float: left;
+          font-size: 14px;
+          line-height: 20px;
+          color: inherit;
+          margin-right: 0.1rem; }
+      .competitive .tab-title ul li.select {
+        color: #24282C;
+        font-weight: bold; }
+.competitive .map {
+  height: 4.28rem;
+  background: #2C293B; }
+  .competitive .map #map {
+    width: 60%;
+    height: 4.28rem;
+    float: left; }
+  .competitive .map ul {
+    float: right;
+    width: 40%; }
+    .competitive .map ul li {
+      text-align: center; }
+      .competitive .map ul li.name {
+        font-size: 18px;
+        line-height: 18px;
+        color: #fff;
+        margin-top: 0.56rem; }
+      .competitive .map ul li.fraction-style {
+        margin-top: 0.6rem; }
+        .competitive .map ul li.fraction-style div {
+          display: table;
+          margin: 0 auto;
+          color: #fff;
+          opacity: .5; }
+          .competitive .map ul li.fraction-style div span {
+            float: left; }
+            .competitive .map ul li.fraction-style div span:nth-child(2) {
+              font-size: 14px;
+              line-height: 14px;
+              margin: 0 0.1rem; }
+            .competitive .map ul li.fraction-style div span.border {
+              width: 12px;
+              height: 0;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+              margin-top: 0.12rem; }
+      .competitive .map ul li.fraction {
+        font-family: Arvo-;
+        font-size: 36px;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 36px;
+        margin-top: 0.24rem;
+        font-weight: bold; }
+      .competitive .map ul li.time {
+        font-size: 12px;
+        color: #605C72;
+        text-align: center;
+        line-height: 12px;
+        margin-top: 0.78rem; }
+.competitive .competitive-panel {
+  position: relative; }
+  .competitive .competitive-panel .filter {
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    z-index: 2; }
+    .competitive .competitive-panel .filter li {
+      border-bottom: 1px solid #EAEDF2;
+      height: 0.88rem;
+      padding: 0 3.7%; }
+      .competitive .competitive-panel .filter li span {
+        float: left; }
+        .competitive .competitive-panel .filter li span:first-child {
+          width: 0.28rem;
+          height: 0.2rem;
+          margin-top: 0.34rem; }
+        .competitive .competitive-panel .filter li span:last-child {
+          margin-left: 0.2rem;
+          font-size: 14px;
+          line-height: 44px;
+          color: #5C626D; }
+      .competitive .competitive-panel .filter li.select span:first-child {
+        background: url("../images/right.png");
+        background-position: center;
+        background-size: cover; }
+      .competitive .competitive-panel .filter li.select span:last-child {
+        color: #24282C; }
+.competitive .down-up-tips span.icon {
+  margin: 0.14rem 0 0 0; }
 
 /*# sourceMappingURL=pageStyle.css.map */

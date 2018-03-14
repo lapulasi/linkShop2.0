@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <!--<link rel="stylesheet" type="text/css" href="../css/reset-min.css">-->
+    <title></title>
+    <script src="js/echarts.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            /*width: 100%;*/
+            height: 400px;
+            /*overflow: hidden;*/
+            position: relative;
+            background: #fff;
+
+        }
+
+        #main, #sub-main, #sub-main2{
+            width: 150%;
+            height:400px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div style="overflow: hidden; margin: 0 5%; background: #fff">
+    <div class="content">
+        <!--<div class="div"
+             style="width:500px;height:300px;line-height:300px;background-color:red;position:absolute;top:0;left:0;">1
+        </div>-->
+        <div id="main"></div>
+        <div id="sub-main"></div>
+        <!--<div id="sub-main2"></div>-->
+    </div>
+</div>
+
+<script src="js/jquery-2.1.4.js"></script>
+<script>
+    // 基于准备好的dom，初始化echarts实例
+    var myChart1 = echarts.init(document.getElementById('main'));
+    var myChart2 = echarts.init(document.getElementById('sub-main'));
+//    var myChart3 = echarts.init(document.getElementById('sub-main2'));
+
+    // 指定图表的配置项和数据
+    var option1 = {
+        title: {
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+        },
+        xAxis: {
+            data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子","裤子","高跟鞋","袜子","裤子","高跟鞋","袜子"]
+        },
+        yAxis: {},
+        series: [{
+            name: '销量',
+            type: 'bar',
+            barWidth: '80%' ,
+            data: [5, 20, 36, 10, 10, 20, 20, 36, 10, 20, 36, 10]
+        }]
+    };
+    var option2 = {
+        title: {
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+        },
+        xAxis: {
+            data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子","裤子","高跟鞋","袜子","裤子","高跟鞋","袜子"]
+        },
+        yAxis: {
+            min: 5,
+            max: 55,
+            splitNumber: 10
+        },
+        series: [{
+//            name: '销量',
+            type: 'line',
+            smooth: true,
+            symbol: 'emptyCircle',
+            symbolSize: 4,
+            data: [5, 20, 36, 10, 10, 20, 36, 10, 10, 10, 10, 20],
+            itemStyle: {
+                normal: {
+                    color: 'rgba(66,128,242,1)',
+                }
+            },
+        },
+            {
+//                name: '销量',
+                type: 'line',
+                smooth: true,
+                symbol: 'emptyCircle',
+                symbolSize: 4,
+                data: [15, 20, 26, 30, 20, 50, 20, 26, 30, 30, 20, 50],
+                itemStyle: {
+                    normal: {
+                        color: 'rgba(66,128,142,1)',
+                        width: 2
+                    }
+                },
+            }]
+    };
+    var option3 = {
+        title: {
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+        },
+        xAxis: {
+            data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子","裤子","高跟鞋","袜子","裤子","高跟鞋","袜子"]
+        },
+        yAxis: {
+            min: 5,
+            max: 55,
+            splitNumber: 10
+        },
+        series: [{
+            name: '销量',
+            type: 'line',
+            smooth: true,
+            symbol: 'emptyCircle',
+            symbolSize: 4,
+            data: [15, 20, 26, 30, 20, 50, 20, 26, 30, 30, 20, 50],
+            itemStyle: {
+                normal: {
+                    color: 'rgba(66,128,142,1)',
+                    width: 2
+                }
+            },
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart1.setOption(option1);
+    myChart2.setOption(option2);
+//    myChart3.setOption(option3);
+
+
+
+    $('.content').on('touchstart', function (evt) {
+        var e = event || evt;
+        e.preventDefault();//阻止其他事件
+        //要做的事情
+    }).on('touchmove', function (evt) {
+        var e = event || evt;
+        e.preventDefault();//阻止其他事件
+
+        // 如果这个元素的位置内只有一个手指的话
+        if (e.targetTouches.length == 1) {
+            var touch = e.targetTouches[0];  // 把元素放在手指所在的位置
+            var scroll_left = parseInt($(this).width()) / 2 - touch.pageX;
+//            console.log(scroll_left);
+            if (scroll_left < 125 && scroll_left > 0) {
+                $(this).css("left", ( -scroll_left + 'px'));
+            }
+        }
+    }).on('touchend', function (evt) {
+        var e = event || evt;
+        e.preventDefault();//阻止其他事件
+    })
+</script>
+</body>
+</html>
