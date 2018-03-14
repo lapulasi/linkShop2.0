@@ -62,7 +62,13 @@
 /*气泡的样式end*/
 .mapPage {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  /*.in-index{
+    top: 12%;
+  }*/
+  /*.in-content{
+    bottom: 30%;
+  }*/ }
   .mapPage header {
     position: absolute;
     top: 0.88rem;
@@ -208,24 +214,31 @@
       margin-top: 0.1rem; }
   .mapPage .notice {
     width: 0.6rem;
-    height: 0.6rem;
+    height: 1.76rem;
+    background: #FFFFFF;
+    border-radius: 2px;
     position: absolute;
     right: 3.2%;
-    background: url("../images/notice.png");
-    background-position: center;
-    background-size: cover; }
+    top: 3.16rem;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center; }
+    .mapPage .notice .title {
+      display: block;
+      margin-top: 0.16rem; }
+    .mapPage .notice .status {
+      display: block;
+      margin-top: 0.16rem;
+      font-size: 10px;
+      line-height: 10px; }
     .mapPage .notice .tipsCircle {
       width: 0.18rem;
       height: 0.18rem;
       border-radius: 50%;
       background: #F43F36;
       position: absolute;
-      top: 0;
-      right: 0; }
-  .mapPage .in-index {
-    bottom: 12%; }
-  .mapPage .in-content {
-    bottom: 30%; }
+      top: -0.08rem;
+      right: -0.08rem; }
   .mapPage .backParent {
     position: absolute;
     right: 3.2%;

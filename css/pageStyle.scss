@@ -289,26 +289,40 @@ $blue: #6F92EA;
   }
   .notice {
     width: pxTorem(30px);
-    height: pxTorem(30px);
+    height: pxTorem(88px);
+    background: #FFFFFF;
+    border-radius: 2px;
     position: absolute;
     right: 3.2%;
-    @include backgroundImg("../images/notice.png");
+    top: pxTorem(158px);
+    @include font($font_size12, 14px);
+    text-align: center;
+    //@include backgroundImg("../images/notice.png");
+    .title{
+      display: block;
+      margin-top: pxTorem(8px);
+    }
+    .status{
+      display: block;
+      margin-top: pxTorem(8px);
+      @include font(10px, 10px);
+    }
     .tipsCircle {
       width: pxTorem(9px);
       height: pxTorem(9px);
       border-radius: 50%;
       background: $red;
       position: absolute;
-      top: 0;
-      right: 0;
+      top: pxTorem(-4px);
+      right: pxTorem(-4px);
     }
   }
-  .in-index{
-    bottom: 12%;
-  }
-  .in-content{
+  /*.in-index{
+    top: 12%;
+  }*/
+  /*.in-content{
     bottom: 30%;
-  }
+  }*/
   .backParent{
     position: absolute;
     right: 3.2%;
