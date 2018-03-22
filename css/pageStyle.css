@@ -71,11 +71,11 @@
   }*/ }
   .mapPage header {
     position: absolute;
-    top: 0.88rem;
+    top: 0;
     width: 100%; }
   .mapPage .drop-down {
     position: absolute;
-    top: 1.76rem;
+    top: 0.88rem;
     width: 100%;
     z-index: 2;
     background: #fff; }
@@ -100,9 +100,9 @@
         font-weight: bold; }
   .mapPage .mask-layer {
     position: absolute;
-    top: 1.76rem;
+    top: 0.88rem;
     width: 100%;
-    height: calc(100% - 88px);
+    height: calc(100% - 44px);
     background: rgba(34, 31, 50, 0.6);
     z-index: 4; }
   .mapPage .weather-content {
@@ -114,7 +114,7 @@
   .mapPage .lab {
     position: absolute;
     left: 0.24rem;
-    top: 2.08rem;
+    top: 1.2rem;
     width: 1.96rem;
     height: 0.68rem;
     text-align: center;
@@ -149,7 +149,7 @@
   .mapPage .lab-drop-down {
     position: absolute;
     left: 0.24rem;
-    top: 2.76rem;
+    top: 1.88rem;
     width: 1.96rem;
     background: #fff;
     border-radius: 0 0 0.24rem 0.24rem; }
@@ -161,7 +161,7 @@
       border-top: 1px solid #EAEDF2; }
   .mapPage .weather {
     position: absolute;
-    top: 2.18rem;
+    top: 1.3rem;
     right: 0.24rem;
     overflow: hidden; }
     .mapPage .weather img {
@@ -219,7 +219,7 @@
     border-radius: 2px;
     position: absolute;
     right: 3.2%;
-    top: 3.16rem;
+    top: 2.28rem;
     font-size: 12px;
     line-height: 14px;
     text-align: center; }
@@ -696,31 +696,59 @@
         background: #fff;
         box-shadow: 0 2px 4px 0 rgba(66, 128, 242, 0.5); }
 
-.regional .nav, .regional .time-range {
+.nav, .time-range {
   overflow: hidden;
   height: 0.88rem;
   background: #fff; }
-  .regional .nav li, .regional .time-range li {
+  .nav li, .time-range li {
     width: 25%;
     float: left;
     text-align: center;
     font-size: 16px;
     line-height: 42px;
     color: #9FA4AC; }
-    .regional .nav li span, .regional .time-range li span {
+    .nav li span, .time-range li span {
       line-height: 42px;
       display: block; }
-      .regional .nav li span:first-child, .regional .time-range li span:first-child {
+      .nav li span:first-child, .time-range li span:first-child {
         width: 100%; }
-      .regional .nav li span:last-child, .regional .time-range li span:last-child {
+      .nav li span:last-child, .time-range li span:last-child {
         width: 0.4rem;
         height: 0;
         border-top: 2px solid #fff;
         margin: 0 auto; }
-    .regional .nav li.current, .regional .time-range li.current {
+    .nav li.current, .time-range li.current {
       color: #24282C; }
-      .regional .nav li.current span:last-child, .regional .time-range li.current span:last-child {
+      .nav li.current span:last-child, .time-range li.current span:last-child {
         border-top: 2px solid #24282C; }
+
+.select-time {
+  height: 44px;
+  background: #fff; }
+  .select-time ul {
+    display: table;
+    margin: 0 auto; }
+    .select-time ul li {
+      float: left; }
+      .select-time ul li.icon {
+        width: 0.24rem;
+        height: 0.32rem;
+        margin-top: 0.28rem; }
+      .select-time ul li:first-child {
+        background: url("../images/left-tips.png");
+        background-position: center;
+        background-size: cover; }
+      .select-time ul li:last-child {
+        float: right;
+        background: url("../images/right-tips.png");
+        background-position: center;
+        background-size: cover; }
+      .select-time ul li:nth-child(2) {
+        text-align: center;
+        font-size: 18px;
+        line-height: 44px;
+        margin: 0 0.8rem; }
+
 .regional .time-range {
   margin-top: 0.2rem;
   border-bottom: 1px solid #EAEDF2; }
@@ -730,38 +758,13 @@
     border-right: 1px solid #EAEDF2; }
     .regional .time-range li:last-child {
       border-right: 0; }
-.regional .select-time {
-  height: 44px;
-  background: #fff; }
-  .regional .select-time ul {
-    display: table;
-    margin: 0 auto; }
-    .regional .select-time ul li {
-      float: left; }
-      .regional .select-time ul li.icon {
-        width: 0.24rem;
-        height: 0.32rem;
-        margin-top: 0.28rem; }
-      .regional .select-time ul li:first-child {
-        background: url("../images/left-tips.png");
-        background-position: center;
-        background-size: cover; }
-      .regional .select-time ul li:last-child {
-        float: right;
-        background: url("../images/right-tips.png");
-        background-position: center;
-        background-size: cover; }
-      .regional .select-time ul li:nth-child(2) {
-        text-align: center;
-        font-size: 18px;
-        line-height: 44px;
-        margin: 0 0.8rem; }
 .regional .list {
   background: #fff; }
   .regional .list li {
     padding: 0 3.7%;
     height: 0.88rem;
-    border-bottom: 1px solid #EAEDF2; }
+    border-bottom: 1px solid #EAEDF2;
+    overflow: hidden; }
     .regional .list li:last-child {
       border-bottom: 0; }
     .regional .list li span {
@@ -968,8 +971,10 @@
   background: #fff; }
   .regional .search-list ul li {
     padding: 0 3.7%;
+    width: 92.6%;
     border-bottom: 1px solid #EAEDF2;
-    height: 0.88rem; }
+    height: 0.88rem;
+    overflow: hidden; }
     .regional .search-list ul li span:first-child {
       float: left;
       font-size: 13px;
@@ -1223,7 +1228,8 @@
     .competitive .competitive-panel .filter li {
       border-bottom: 1px solid #EAEDF2;
       height: 0.88rem;
-      padding: 0 3.7%; }
+      padding: 0 3.7%;
+      overflow: hidden; }
       .competitive .competitive-panel .filter li span {
         float: left; }
         .competitive .competitive-panel .filter li span:first-child {
@@ -1243,5 +1249,818 @@
         color: #24282C; }
 .competitive .down-up-tips span.icon {
   margin: 0.14rem 0 0 0; }
+
+.full-data {
+  height: 1.78rem;
+  background: #fff;
+  overflow: hidden; }
+  .full-data li {
+    width: 25%;
+    height: 0.8rem;
+    margin: 0.5rem auto;
+    border-right: 1px solid #EAEDF2;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+    line-height: 14px; }
+    .full-data li span {
+      font-size: 14px;
+      line-height: 14px;
+      color: #9FA4AC; }
+    .full-data li > span {
+      display: block;
+      margin-top: -5px; }
+    .full-data li p {
+      font-family: Arvo-;
+      font-size: 20px;
+      color: #24282C;
+      text-align: center;
+      line-height: 20px;
+      font-weight: bold;
+      margin-top: 0.28rem; }
+      .full-data li p span {
+        font-weight: 100; }
+
+.chart {
+  clear: both;
+  height: 4.1rem;
+  background: #fff;
+  margin-top: 0.4rem;
+  overflow: hidden; }
+  .chart .content {
+    height: 4.1rem;
+    position: relative; }
+
+.trend-map {
+  background: #fff;
+  margin-top: 0.2rem;
+  overflow: hidden; }
+  .trend-map .title {
+    font-size: 16px;
+    line-height: 16px;
+    color: #5C626D;
+    font-weight: bold;
+    margin-top: 0.4rem;
+    margin-left: 3.7%; }
+    .trend-map .title span {
+      font-size: 12px;
+      line-height: 12px;
+      color: #9FA4AC;
+      margin-left: 0.12rem;
+      font-weight: 100; }
+  .trend-map .tab {
+    margin: 0.4rem 0 0 3.7%;
+    height: 0.6rem;
+    float: left;
+    border: 1px solid #EAEDF2;
+    border-radius: 2px; }
+    .trend-map .tab li {
+      width: 1.4rem;
+      box-sizing: border-box;
+      float: left;
+      font-size: 12px;
+      line-height: 30px;
+      text-align: center;
+      color: #9FA4AC;
+      border-left: 1px solid #EAEDF2; }
+      .trend-map .tab li:first-child {
+        border-left: 0; }
+      .trend-map .tab li.select {
+        background: #6F92EA;
+        color: #fff; }
+  .trend-map .labels {
+    width: 92.6%;
+    margin: 0 3.7%; }
+    .trend-map .labels li {
+      width: 31%;
+      height: 0.64rem;
+      box-sizing: border-box;
+      border: 1px solid #EAEDF2;
+      font-size: 13px;
+      line-height: 32px;
+      text-align: center;
+      color: #5C626D;
+      border-radius: 3px;
+      float: left;
+      margin: 0 3.5% 0.2rem 0; }
+      .trend-map .labels li:nth-child(3n) {
+        margin-right: 0; }
+      .trend-map .labels li.select {
+        background: #6F92EA;
+        color: #fff; }
+  .trend-map .tips {
+    font-size: 12px;
+    line-height: 12px;
+    color: #9FA4AC;
+    margin-top: 0.2rem;
+    text-align: center; }
+  .trend-map .explanation ul {
+    display: table;
+    margin: 0.14rem auto;
+    overflow: hidden; }
+    .trend-map .explanation ul li {
+      float: left;
+      font-size: 13px;
+      line-height: 15px;
+      color: #5C626D; }
+      .trend-map .explanation ul li.line {
+        width: 0.84rem;
+        height: 0;
+        border-bottom: 1px solid #EAEDF2;
+        margin-top: 0.12rem; }
+      .trend-map .explanation ul li:nth-child(2) {
+        margin: 0 8px; }
+
+.shop-suggest {
+  margin-bottom: 0.8rem; }
+  .shop-suggest .growth-trend {
+    height: 8.2rem; }
+  .shop-suggest .day-service {
+    height: 6.36rem; }
+    .shop-suggest .day-service .chart {
+      height: 4.64rem; }
+  .shop-suggest .shop-data {
+    height: 10rem; }
+    .shop-suggest .shop-data .chart {
+      height: 5.9rem; }
+  .shop-suggest #growth-trend-line, .shop-suggest #growth-trend-bar {
+    width: 150%;
+    height: 4.1rem;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .shop-suggest #day-service-line {
+    width: 100%;
+    height: 4.64rem; }
+  .shop-suggest #shop-data-bar {
+    width: 100%;
+    height: 5.9rem; }
+
+.sales-suggest {
+  margin-bottom: 0.8rem; }
+  .sales-suggest .full-data li {
+    width: 33.33%; }
+  .sales-suggest .average-sales {
+    height: 6.32rem; }
+    .sales-suggest .average-sales .chart {
+      height: 4.6rem; }
+  .sales-suggest .weekly-analysis {
+    height: 8.2rem; }
+    .sales-suggest .weekly-analysis .chart {
+      height: 4.52rem; }
+  .sales-suggest .sales-competitiveness-analysis {
+    height: 7.84rem; }
+    .sales-suggest .sales-competitiveness-analysis .chart {
+      height: 5.18rem; }
+  .sales-suggest #average-sales {
+    width: 100%;
+    height: 4.6rem; }
+  .sales-suggest #weekly-analysis-line, .sales-suggest #weekly-analysis-bar {
+    width: 100%;
+    height: 4.52rem;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .sales-suggest #sales-competitiveness-analysis {
+    width: 100%;
+    height: 5.18rem; }
+
+.customer-suggest {
+  margin-bottom: 0.8rem; }
+  .customer-suggest .trend-map:first-child {
+    margin-top: 0; }
+  .customer-suggest .people-structure {
+    height: 5.8rem; }
+    .customer-suggest .people-structure .chart {
+      height: 4.08rem; }
+  .customer-suggest #people-structure {
+    width: 100%;
+    height: 4.08rem; }
+  .customer-suggest .custom-max-time {
+    height: 6.86rem; }
+    .customer-suggest .custom-max-time .chart {
+      height: 4.28rem; }
+  .customer-suggest #custom-max-time {
+    width: 100%;
+    height: 4.28rem; }
+  .customer-suggest .customer-shop-trend {
+    height: 6.48rem; }
+    .customer-suggest .customer-shop-trend .chart {
+      height: 4.76rem; }
+  .customer-suggest #customer-shop-trend {
+    width: 100%;
+    height: 4.76rem; }
+  .customer-suggest .custom-long-time {
+    height: 6.86rem; }
+    .customer-suggest .custom-long-time .chart {
+      height: 5.14rem; }
+  .customer-suggest #custom-long-time {
+    width: 100%;
+    height: 5.14rem; }
+  .customer-suggest .shop-flow-ratio {
+    height: 5.8rem; }
+    .customer-suggest .shop-flow-ratio .chart {
+      height: 4.08rem; }
+  .customer-suggest #shop-flow-ratio {
+    width: 100%;
+    height: 4.08rem; }
+
+.full-page-trend {
+  margin-bottom: 0.4rem; }
+  .full-page-trend .nav li {
+    width: 33.33%; }
+  .full-page-trend .chart {
+    height: 4.8rem;
+    margin-top: 0; }
+    .full-page-trend .chart .content {
+      height: 4.8rem; }
+  .full-page-trend .dataArea {
+    height: 1.92rem;
+    overflow: hidden; }
+    .full-page-trend .dataArea ul {
+      float: left;
+      width: 33.33%; }
+      .full-page-trend .dataArea ul li {
+        margin: 0 auto; }
+      .full-page-trend .dataArea ul .map-icon {
+        width: 0.72rem;
+        height: 0.16rem; }
+      .full-page-trend .dataArea ul.px .map-icon {
+        background: url("../images/line-green.png");
+        background-position: center;
+        background-size: cover; }
+      .full-page-trend .dataArea ul.rx .map-icon {
+        background: url("../images/line-blue.png");
+        background-position: center;
+        background-size: cover; }
+      .full-page-trend .dataArea ul.jkl .map-icon, .full-page-trend .dataArea ul.gzsc .map-icon, .full-page-trend .dataArea ul.zlsj .map-icon {
+        height: 0.1rem;
+        background: #A09DAA; }
+      .full-page-trend .dataArea ul.qzdd .map-icon {
+        background: url("../images/line-purple.png");
+        background-position: center;
+        background-size: cover; }
+      .full-page-trend .dataArea ul.fwnl .map-icon {
+        background: url("../images/line-yellow.png");
+        background-position: center;
+        background-size: cover; }
+      .full-page-trend .dataArea ul.kljj .map-icon {
+        background: url("../images/line-pink.png");
+        background-position: center;
+        background-size: cover; }
+      .full-page-trend .dataArea ul .label {
+        font-size: 14px;
+        line-height: 14px;
+        color: #9FA4AC;
+        margin: 0.32rem 0 0.2rem;
+        text-align: center; }
+      .full-page-trend .dataArea ul .data-intro div {
+        display: table;
+        margin: 0 auto; }
+      .full-page-trend .dataArea ul .data-intro span {
+        float: left; }
+        .full-page-trend .dataArea ul .data-intro span:nth-child(2) {
+          font-size: 24px;
+          line-height: 24px;
+          color: #24282C;
+          font-weight: bold;
+          margin: 0 0.08rem; }
+      .full-page-trend .dataArea ul .data-intro .icon {
+        width: 0.22rem;
+        height: 0.26rem;
+        margin-top: 0.1rem; }
+      .full-page-trend .dataArea ul .data-intro .i-up {
+        background: url("../images/red-up.png");
+        background-position: center;
+        background-size: cover; }
+      .full-page-trend .dataArea ul .data-intro .i-down {
+        background: url("../images/green-down.png");
+        background-position: center;
+        background-size: cover; }
+
+.storeTrends .effect, .salesTrends .effect {
+  height: 6.72rem;
+  background: #fff; }
+  .storeTrends .effect:last-child, .salesTrends .effect:last-child {
+    margin-top: 0.2rem; }
+.storeTrends #store-trend-line1, .storeTrends #store-trend-bar1, .storeTrends #store-trend-line2, .storeTrends #store-trend-bar2, .salesTrends #store-trend-line1, .salesTrends #store-trend-bar1, .salesTrends #store-trend-line2, .salesTrends #store-trend-bar2 {
+  width: 150%;
+  height: 4.8rem;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.customerTrends .chart {
+  height: 8.92rem;
+  margin-top: 0; }
+  .customerTrends .chart .content {
+    height: 8.92rem; }
+.customerTrends .effect {
+  height: 100%;
+  background: #fff; }
+.customerTrends #customer-trend-bar, .customerTrends #customer-trend-line {
+  width: 150%;
+  height: 8.92rem;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.attendance {
+  margin-bottom: 0.8rem; }
+  .attendance .full-data li {
+    width: 50%; }
+  .attendance .chart {
+    height: 8.96rem;
+    margin-top: 0;
+    background: #2C293B; }
+    .attendance .chart .content {
+      height: 8.96rem;
+      width: 100%;
+      position: relative; }
+  .attendance #work-time-line {
+    width: 150%;
+    height: 8.96rem; }
+  .attendance p.attendance-tittle {
+    height: 0.8rem;
+    background: #fff;
+    padding-left: 3.7%;
+    font-size: 16px;
+    line-height: 40px;
+    color: #5C626D; }
+  .attendance .work-time-trend, .attendance .visit-timetable {
+    margin-top: 0.2rem; }
+  .attendance .visit-timetable {
+    padding-top: 0.2rem;
+    height: 5.52rem;
+    background: #fff; }
+    .attendance .visit-timetable table {
+      width: 92.6%;
+      margin: 0 3.7%;
+      height: 4.08rem;
+      font-size: 14px;
+      color: #5C626D;
+      line-height: 14px;
+      table-layout: fixed;
+      border-collapse: collapse;
+      border: 1px solid #EAEDF2; }
+      .attendance .visit-timetable table tr, .attendance .visit-timetable table td {
+        border: 1px solid #EAEDF2; }
+      .attendance .visit-timetable table td {
+        text-align: center; }
+
+.escape, .arrive-shop {
+  margin-bottom: 0.8rem; }
+
+.reminder-switch {
+  height: 1rem;
+  background: #fff;
+  padding: 0 3.7%;
+  overflow: hidden;
+  margin-top: 0.2rem; }
+  .reminder-switch p {
+    float: left;
+    font-size: 16px;
+    line-height: 50px;
+    color: #24282C; }
+
+.user-infor .title {
+  height: 0.8rem;
+  background: #fff;
+  padding: 0 3.7%;
+  margin-top: 0.2rem;
+  font-size: 14px;
+  line-height: 40px;
+  color: #5C626D;
+  border-bottom: 1px solid #EAEDF2; }
+  .user-infor .title .time {
+    float: left; }
+  .user-infor .title .totalNum {
+    float: right; }
+.user-infor .user-panel {
+  padding: 0 3.7%;
+  height: 2.56rem;
+  overflow: hidden;
+  background: #fff;
+  margin-top: 0.2rem; }
+  .user-infor .user-panel:first-child {
+    margin-top: 0; }
+  .user-infor .user-panel .ava {
+    float: left;
+    width: 1.28rem; }
+    .user-infor .user-panel .ava div {
+      position: relative;
+      width: 1.28rem;
+      height: 1.28rem;
+      margin: 0.4rem 0 0.2rem 0; }
+      .user-infor .user-panel .ava div img {
+        width: 1.28rem;
+        height: 1.28rem; }
+      .user-infor .user-panel .ava div span {
+        position: absolute;
+        width: 0.56rem;
+        height: 0.56rem;
+        right: -3px;
+        bottom: -7px; }
+      .user-infor .user-panel .ava div .male {
+        background: url("../images/male.png");
+        background-position: center;
+        background-size: cover; }
+      .user-infor .user-panel .ava div .female {
+        background: url("../images/female.png");
+        background-position: center;
+        background-size: cover; }
+    .user-infor .user-panel .ava .age {
+      font-size: 14px;
+      line-height: 14px;
+      color: #5C626D;
+      text-align: center; }
+  .user-infor .user-panel ul {
+    float: left;
+    margin-left: 0.4rem;
+    font-size: 14px;
+    line-height: 14px;
+    color: #5C626D; }
+    .user-infor .user-panel ul li:nth-child(2n+1) {
+      font-size: 12px;
+      line-height: 12px;
+      color: #9FA4AC;
+      margin-top: 0.46rem; }
+    .user-infor .user-panel ul li:nth-child(2n) {
+      margin-top: 0.16rem; }
+
+.arrive-shop .user-panel ul li:nth-child(2n+1) {
+  font-size: 14px;
+  line-height: 14px; }
+.arrive-shop .user-panel ul li.arrive-shop-number {
+  margin-top: 0.56rem; }
+  .arrive-shop .user-panel ul li.arrive-shop-number span {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: bold;
+    margin: 0 3px;
+    color: #24282C; }
+
+.opportunity .tab-title {
+  height: 0.88rem;
+  background: #fff; }
+  .opportunity .tab-title ul {
+    width: 50%;
+    margin: 0 auto; }
+    .opportunity .tab-title ul li {
+      width: 50%;
+      font-weight: bold;
+      font-size: 18px; }
+.opportunity .statistics {
+  margin-top: 0.2rem; }
+  .opportunity .statistics .nav li {
+    width: 33.33%; }
+  .opportunity .statistics .repeat-arrive-number {
+    height: 10.3rem;
+    background: #fff; }
+    .opportunity .statistics .repeat-arrive-number .chart {
+      height: 10.3rem;
+      margin-top: 0;
+      background: #2C293B; }
+      .opportunity .statistics .repeat-arrive-number .chart .content {
+        height: 10.3rem;
+        width: 100%;
+        position: relative; }
+    .opportunity .statistics .repeat-arrive-number p {
+      font-size: 14px;
+      line-height: 14px;
+      color: #5C626D;
+      text-align: center;
+      margin-top: 0.2rem; }
+.opportunity #repeat-arrive-number {
+  width: 150%;
+  height: 10.3rem; }
+
+.sales-report, .hours-setting, .attendance-manage {
+  overflow: hidden; }
+  .sales-report .panel, .hours-setting .panel, .attendance-manage .panel {
+    margin-top: 0.4rem; }
+  .sales-report ul, .hours-setting ul, .attendance-manage ul {
+    height: 1rem;
+    background: #fff;
+    font-size: 16px;
+    line-height: 50px;
+    border-bottom: 1px solid #EAEDF2;
+    padding: 0 3.7%; }
+    .sales-report ul:last-child, .hours-setting ul:last-child, .attendance-manage ul:last-child {
+      border-bottom: 0; }
+    .sales-report ul li, .hours-setting ul li, .attendance-manage ul li {
+      position: relative;
+      width: 50%; }
+      .sales-report ul li input, .hours-setting ul li input, .attendance-manage ul li input {
+        height: 1rem;
+        width: 100%;
+        font-size: 16px;
+        line-height: 50px;
+        color: #24282C;
+        font-weight: bold;
+        text-align: right; }
+      .sales-report ul li:first-child, .hours-setting ul li:first-child, .attendance-manage ul li:first-child {
+        float: left;
+        color: #5C626D; }
+      .sales-report ul li:last-child, .hours-setting ul li:last-child, .attendance-manage ul li:last-child {
+        float: right;
+        font-size: 16px;
+        line-height: 50px;
+        color: #24282C;
+        font-weight: bold;
+        text-align: right; }
+      .sales-report ul li span, .hours-setting ul li span, .attendance-manage ul li span {
+        float: right; }
+      .sales-report ul li .select-btn, .hours-setting ul li .select-btn, .attendance-manage ul li .select-btn {
+        width: 0.36rem;
+        height: 1rem;
+        float: right;
+        margin-left: 5px; }
+        .sales-report ul li .select-btn span, .hours-setting ul li .select-btn span, .attendance-manage ul li .select-btn span {
+          width: 0.36rem;
+          height: 0.46rem;
+          position: relative; }
+        .sales-report ul li .select-btn i, .hours-setting ul li .select-btn i, .attendance-manage ul li .select-btn i {
+          width: 0;
+          height: 0;
+          position: absolute;
+          border-radius: 2px; }
+        .sales-report ul li .select-btn .i-up, .hours-setting ul li .select-btn .i-up, .attendance-manage ul li .select-btn .i-up {
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid #9FA4AC;
+          left: 4px;
+          top: 16px; }
+        .sales-report ul li .select-btn .i-down, .hours-setting ul li .select-btn .i-down, .attendance-manage ul li .select-btn .i-down {
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid #9FA4AC;
+          left: 4px;
+          top: 2px; }
+      .sales-report ul li.right-tip, .hours-setting ul li.right-tip, .attendance-manage ul li.right-tip {
+        width: 0.14rem;
+        height: 0.24rem;
+        margin-top: 0.38rem;
+        background: url("../images/right-tip.png");
+        background-position: center;
+        background-size: cover; }
+    .sales-report ul.select li, .hours-setting ul.select li, .attendance-manage ul.select li {
+      color: #24282C;
+      font-weight: bold; }
+      .sales-report ul.select li:last-child, .hours-setting ul.select li:last-child, .attendance-manage ul.select li:last-child {
+        width: 0.28rem;
+        height: 0.2rem;
+        margin-top: 0.4rem;
+        background: url("../images/right.png");
+        background-position: center;
+        background-size: cover; }
+  .sales-report button, .hours-setting button, .attendance-manage button {
+    width: 100%;
+    height: 1rem;
+    background: #fff;
+    font-size: 18px;
+    line-height: 50px;
+    color: #6F92EA;
+    text-align: center;
+    margin-top: 0.8rem; }
+
+.hours-setting ul li:last-child {
+  color: #9FA4AC;
+  font-weight: inherit; }
+
+.my-employee-attendance .select-time {
+  border-bottom: 1px solid #EAEDF2; }
+.my-employee-attendance .full-data li {
+  width: 50%; }
+  .my-employee-attendance .full-data li:last-child {
+    border-right: 0; }
+.my-employee-attendance table {
+  width: 100%;
+  font-size: 14px;
+  color: #5C626D;
+  table-layout: fixed;
+  border-collapse: collapse;
+  background: #fff;
+  margin-top: 0.2rem;
+  border: 1px solid #EAEDF2; }
+  .my-employee-attendance table tr, .my-employee-attendance table td {
+    border: 1px solid #EAEDF2;
+    height: 0.8rem; }
+  .my-employee-attendance table td {
+    text-align: center; }
+  .my-employee-attendance table thead td {
+    color: #A0A5AC; }
+
+.concatUs {
+  padding: 0 3.7%;
+  background: #fff;
+  overflow: hidden; }
+  .concatUs .businessCooperation, .concatUs .companyAddress {
+    height: 2.14rem;
+    border-bottom: 1px solid #EAEDF2; }
+    .concatUs .businessCooperation li, .concatUs .companyAddress li {
+      font-size: 0.32rem;
+      line-height: 1; }
+      .concatUs .businessCooperation li:first-child, .concatUs .companyAddress li:first-child {
+        font-size: 0.36rem;
+        margin-top: 0.8rem;
+        color: #5C626D; }
+      .concatUs .businessCooperation li:nth-child(2), .concatUs .companyAddress li:nth-child(2) {
+        margin-top: 0.36rem;
+        color: #9FA4AC; }
+      .concatUs .businessCooperation li:last-child, .concatUs .companyAddress li:last-child {
+        margin-top: 0.32rem;
+        color: #9FA4AC; }
+      .concatUs .businessCooperation li span, .concatUs .companyAddress li span {
+        color: #24282C;
+        font-weight: bold; }
+  .concatUs .companyAddress {
+    border-bottom: none;
+    height: 1.64rem; }
+  .concatUs .aq {
+    width: 3rem;
+    height: 3.52rem;
+    margin: 2.76rem auto 0; }
+    .concatUs .aq img {
+      width: 3rem;
+      height: 3rem; }
+    .concatUs .aq p {
+      font-size: 0.3rem;
+      line-height: 1;
+      margin-top: 0.2rem;
+      text-align: center;
+      color: #9FA4AC; }
+
+.question {
+  padding: 0 3.7%;
+  overflow: hidden; }
+  .question dl {
+    border-bottom: 1px solid #EAEDF2;
+    padding-bottom: 0.4rem; }
+    .question dl dt {
+      font-size: 0.36rem;
+      line-height: 1;
+      color: #24282C;
+      margin-top: 0.4rem; }
+    .question dl dd {
+      font-size: 0.3rem;
+      color: #5C626D;
+      line-height: 0.5rem;
+      margin-top: 0.2rem; }
+
+p.errorTip {
+  width: 100%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  margin: 0.2rem 0;
+  text-align: center;
+  color: #F43F36;
+  font-size: 0.28rem; }
+
+.changePass input {
+  padding-left: 3.7%;
+  width: 96.3%;
+  height: 1rem;
+  line-height: 1rem;
+  font-size: 0.32rem;
+  color: #9FA4AC;
+  background: #fff;
+  margin-top: 0.4rem; }
+.changePass button {
+  height: 1rem;
+  color: #6F92EA;
+  font-size: 0.36rem;
+  line-height: 1rem;
+  text-align: center;
+  width: 100%;
+  background: #fff;
+  float: left; }
+
+.account ul {
+  background: #fff;
+  font-size: 0.32rem;
+  color: #9FA4AC;
+  padding-left: 3.7%; }
+  .account ul li {
+    border-bottom: 1px solid #EAEDF2;
+    padding-right: 3.7%;
+    overflow: hidden; }
+    .account ul li a {
+      display: block;
+      height: 1rem; }
+    .account ul li:first-child {
+      height: 1.6rem; }
+      .account ul li:first-child a {
+        height: 1.6rem; }
+      .account ul li:first-child span {
+        line-height: 1.6rem; }
+        .account ul li:first-child span img {
+          width: 1.28rem;
+          height: 1.28rem;
+          vertical-align: middle;
+          border-radius: 50%; }
+        .account ul li:first-child span.rightTip {
+          margin-top: 0.66rem; }
+    .account ul li span {
+      float: right;
+      line-height: 1rem;
+      color: #9FA4AC; }
+      .account ul li span:first-child {
+        color: #24282C;
+        float: left; }
+      .account ul li span.rightTip {
+        margin-left: 0.1rem; }
+.account .changePassword {
+  margin-top: 0.4rem; }
+  .account .changePassword li:first-child {
+    height: 1rem; }
+    .account .changePassword li:first-child span {
+      line-height: 1rem; }
+      .account .changePassword li:first-child span:last-child {
+        margin-top: 0.36rem; }
+.account button {
+  height: 1rem;
+  color: #6F92EA;
+  font-size: 0.36rem;
+  line-height: 1rem;
+  text-align: center;
+  width: 100%;
+  background: #fff;
+  float: left;
+  margin-top: 0.4rem; }
+
+.myManage .user-center-panel {
+  height: 3.68rem;
+  background: #fff; }
+.myManage .banner {
+  width: 100%;
+  height: 2.2rem;
+  background: url("../images/myBg.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center; }
+  .myManage .banner img {
+    width: 1.56rem;
+    height: 1.56rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    margin-top: 1.6rem;
+    border-radius: 50%;
+    float: left; }
+  .myManage .banner ul {
+    float: left;
+    width: calc(92.6% - 80px);
+    margin-left: 0.28rem;
+    margin-top: 2.36rem; }
+    .myManage .banner ul li {
+      text-align: left; }
+      .myManage .banner ul li.phone {
+        font-size: 0.36rem;
+        color: #24282C;
+        font-weight: bold; }
+      .myManage .banner ul li.end-time {
+        font-size: 12px;
+        line-height: 12px;
+        color: #9FA4AC;
+        margin-top: 0.2rem; }
+.myManage .panel {
+  clear: both;
+  overflow: hidden;
+  margin-top: 0.2rem;
+  background: #fff;
+  padding-left: 3.7%; }
+  .myManage .panel a {
+    display: block;
+    height: 1rem; }
+  .myManage .panel img {
+    float: left;
+    width: 0.48rem;
+    height: 0.48rem;
+    margin-top: 0.26rem;
+    margin-right: 0.28rem; }
+  .myManage .panel ul {
+    float: left;
+    font-size: 0.32rem;
+    color: #5C626D;
+    width: calc(100% - .76rem); }
+    .myManage .panel ul.border {
+      border-bottom: 1px solid #EAEDF2; }
+    .myManage .panel ul li {
+      overflow: hidden;
+      padding-right: 3.7%; }
+      .myManage .panel ul li span {
+        line-height: 1rem; }
+        .myManage .panel ul li span:first-child {
+          float: left; }
+        .myManage .panel ul li span.rightTip {
+          float: right; }
+
+span.rightTip {
+  width: 0.28rem;
+  height: 0.28rem;
+  margin-top: 0.36rem;
+  background: url("../images/rightTip.png");
+  background-position: center;
+  background-size: cover; }
 
 /*# sourceMappingURL=pageStyle.css.map */

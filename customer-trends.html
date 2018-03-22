@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>顾客趋势</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1, minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pageStyle.css">
+    <script src="js/echarts.min.js"></script>
+</head>
+<body>
+<div class="full-page-trend customerTrends">
+    <ul class="nav">
+        <li  class="current">
+            <span>按日</span>
+            <span></span>
+        </li>
+        <li>
+            <span>按周</span>
+            <span class=""></span>
+        </li>
+        <li>
+            <span>按月</span>
+            <span class=""></span>
+        </li>
+    </ul>
+    <div class="effect">
+        <div class="chart">
+            <div class="content">
+                <div id="customer-trend-bar"></div>
+                <div id="customer-trend-line"></div>
+            </div>
+        </div>
+        <div class="dataArea">
+            <ul class="px">
+                <li class="map-icon"></li>
+                <li class="label">客流量(人)</li>
+                <li class="data-intro">
+                    <div>
+                        <span class="icon i-up"></span>
+                        <span>692</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="zlsj">
+                <li class="map-icon"></li>
+                <li class="label">平均驻留时间</li>
+                <li class="data-intro">
+                    <div>
+                        <span class="icon i-down"></span>
+                        <span>0.6h</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="kljj">
+                <li class="map-icon"></li>
+                <li class="label">店均客流(人)</li>
+                <li class="data-intro">
+                    <div>
+                        <span class="icon i-up"></span>
+                        <span>528</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/fontSize.js"></script>
+<script src="js/customerTrends.js"></script>
+<script src="js/verticalSlide.js"></script>
+</body>
+</html>

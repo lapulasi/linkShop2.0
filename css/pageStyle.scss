@@ -89,6 +89,7 @@ $blue: #6F92EA;
 .purple-bubble {
   @include backgroundImg("../images/purple.png");
 }
+
 .pink-bubble-err {
   @include backgroundImg("../images/pink-err.png");
 }
@@ -110,12 +111,12 @@ $blue: #6F92EA;
 
   header {
     position: absolute;
-    top: pxTorem(44px);
+    top: 0;
     width: 100%;
   }
   .drop-down {
     position: absolute;
-    top: pxTorem(88px);
+    top: pxTorem(44px);
     width: 100%;
     z-index: 2;
     background: $fff;
@@ -134,12 +135,12 @@ $blue: #6F92EA;
           margin: pxTorem(17px) pxTorem(10px) 0 3.2%;
         }
       }
-      &.current{
-        span{
-          &:first-child{
+      &.current {
+        span {
+          &:first-child {
             @include backgroundImg("../images/hook.png");
           }
-          &:last-child{
+          &:last-child {
             color: $gray3;
             font-weight: bold;
           }
@@ -148,11 +149,11 @@ $blue: #6F92EA;
 
     }
   }
-  .mask-layer{
+  .mask-layer {
     position: absolute;
-    top: pxTorem(88px);
+    top: pxTorem(44px);
     width: 100%;
-    height: calc(100% - 88px);
+    height: calc(100% - 44px);
     background: rgba(#221F32, .6);
     z-index: 4;
   }
@@ -168,7 +169,7 @@ $blue: #6F92EA;
   .lab {
     position: absolute;
     left: pxTorem(12px);
-    top: pxTorem(104px);
+    top: pxTorem(60px);
     width: pxTorem(98px);
     height: pxTorem(34px);
     text-align: center;
@@ -176,41 +177,41 @@ $blue: #6F92EA;
     box-shadow: 0 2px 4px 0 rgba(159, 164, 172, 0.50);
     border-radius: 12px;
     overflow: auto;
-    span{
+    span {
       float: left;
       display: table;
       margin: 0 auto;
-      &:first-child{
+      &:first-child {
         font-size: pxTorem($font_size14);
         line-height: pxTorem(34px);
         margin-left: pxTorem(13px);
       }
-      &.tips{
+      &.tips {
         float: right;
         width: pxTorem(8px);
         height: pxTorem(6px);
         margin-top: pxTorem(14px);
         margin-right: pxTorem(13px);
       }
-      &.down-tips{
+      &.down-tips {
         @include backgroundImg("../images/down-tip-s.png");
       }
-      &.up-tips{
+      &.up-tips {
         @include backgroundImg("../images/up-tip-s.png");
       }
     }
   }
-  .delete-raduis{
+  .delete-raduis {
     border-radius: pxTorem(12px) pxTorem(12px) 0 0;
   }
-  .lab-drop-down{
+  .lab-drop-down {
     position: absolute;
     left: pxTorem(12px);
-    top: pxTorem(138px);
+    top: pxTorem(94px);
     width: pxTorem(98px);
     background: $fff;
     border-radius: 0 0 pxTorem(12px) pxTorem(12px);
-    li{
+    li {
       padding-left: pxTorem(13px);
       height: pxTorem(34px);
       font-size: pxTorem($font_size14);
@@ -221,7 +222,7 @@ $blue: #6F92EA;
   .weather {
     position: absolute;
     //margin: pxTorem(30px) pxTorem(12px) 0 0;
-    top: pxTorem(109px);
+    top: pxTorem(65px);
     right: pxTorem(12px);
     overflow: hidden;
     img {
@@ -251,7 +252,6 @@ $blue: #6F92EA;
     height: calc(100% - 88px);
     clear: both;
 
-
   }
   .sortList {
     position: absolute;
@@ -269,7 +269,7 @@ $blue: #6F92EA;
         display: block;
       }
     }
-    .faultNum{
+    .faultNum {
       background: #221F32;
       border: 1px solid #F5A623;
       color: $fff;
@@ -294,15 +294,15 @@ $blue: #6F92EA;
     border-radius: 2px;
     position: absolute;
     right: 3.2%;
-    top: pxTorem(158px);
+    top: pxTorem(114px);
     @include font($font_size12, 14px);
     text-align: center;
     //@include backgroundImg("../images/notice.png");
-    .title{
+    .title {
       display: block;
       margin-top: pxTorem(8px);
     }
-    .status{
+    .status {
       display: block;
       margin-top: pxTorem(8px);
       @include font(10px, 10px);
@@ -323,7 +323,7 @@ $blue: #6F92EA;
   /*.in-content{
     bottom: 30%;
   }*/
-  .backParent{
+  .backParent {
     position: absolute;
     right: 3.2%;
     bottom: 12%;
@@ -331,25 +331,25 @@ $blue: #6F92EA;
     height: pxTorem(66px);
     border-radius: 50%;
     background: #3385FF;
-    box-shadow: 0 3px 6px 0 rgba(51,133,255,0.50);
+    box-shadow: 0 3px 6px 0 rgba(51, 133, 255, 0.50);
     overflow: hidden;
-    span{
+    span {
       display: block;
       color: $fff;
-      &:first-child{
+      &:first-child {
         width: pxTorem(24px);
         height: pxTorem(19px);
         margin: pxTorem(10px) auto;
         @include backgroundImg("../images/back.png");
       }
-      &:last-child{
+      &:last-child {
         font-size: pxTorem($font_size14);
         line-height: pxTorem($font_size14);
         text-align: center;
       }
     }
   }
-  .sub-buttle{ /*店铺泡泡*/
+  .sub-buttle { /*店铺泡泡*/
     width: 64%;
     height: pxTorem(258px);
     position: absolute;
@@ -358,13 +358,13 @@ $blue: #6F92EA;
     margin-left: -32%;
     margin-top: pxTorem(-129px);
     z-index: 5;
-    p{
+    p {
       height: pxTorem(44px);
       text-align: center;
       color: $fff;
       @include font($font_size16, 44px);
     }
-    ul{
+    ul {
       width: pxTorem(140px);
       height: pxTorem(140px);
       border-radius: 50%;
@@ -373,19 +373,19 @@ $blue: #6F92EA;
       font-size: pxTorem($font_size14);
       display: table;
       margin: 0 auto;
-      li{
-        &:first-child{
-            color: $gray9;
+      li {
+        &:first-child {
+          color: $gray9;
           line-height: pxTorem(14px);
           margin-top: pxTorem(24px);
         }
-        &:nth-child(2){
+        &:nth-child(2) {
           font-size: pxTorem(26px);
           line-height: pxTorem(24px);
           font-weight: bold;
           margin: pxTorem(10px) 0;
         }
-        &:last-child{
+        &:last-child {
           width: pxTorem(68px);
           font-size: pxTorem($font_size16);
           line-height: pxTorem(44px);
@@ -395,7 +395,7 @@ $blue: #6F92EA;
         }
       }
     }
-    span{
+    span {
       position: absolute;
       width: pxTorem(56px);
       height: pxTorem(56px);
@@ -406,29 +406,29 @@ $blue: #6F92EA;
       background: $fff;
     }
   }
-  .shop-bubble{
-    span{
-      &:first-child{
+  .shop-bubble {
+    span {
+      &:first-child {
         left: 0;
         bottom: pxTorem(37px);
       }
-      &:nth-child(2){
+      &:nth-child(2) {
         left: pxTorem(93px);
         bottom: 0;
       }
-      &:last-child{
+      &:last-child {
         right: 0;
         bottom: pxTorem(37px);
       }
     }
   }
-  .quan-bubble{
-    span{
-      &:first-child{
+  .quan-bubble {
+    span {
+      &:first-child {
         left: pxTorem(28px);
         bottom: 0;
       }
-      &:last-child{
+      &:last-child {
         right: pxTorem(28px);
         line-height: pxTorem(18px);
         bottom: 0;
@@ -450,23 +450,23 @@ $blue: #6F92EA;
     box-shadow: 0 2px 4px 0 rgba(159, 164, 172, 0.50);
     border-radius: pxTorem(5px);
   }
-  .camera{
+  .camera {
     position: absolute;
     bottom: 0;
     height: pxTorem(52px);
     background: $fff;
-    padding:0 3.2%;
+    padding: 0 3.2%;
     width: 93.6%;
-    p{
+    p {
       line-height: pxTorem(52px);
       color: $gray6;
       float: left;
       font-size: pxTorem($font_size16);
-      span{
+      span {
         color: $pink;
       }
     }
-    span.right-tip{
+    span.right-tip {
       float: right;
       width: pxTorem(7px);
       height: pxTorem(12px);
@@ -651,43 +651,45 @@ $blue: #6F92EA;
     }
   }
 }
-.faulty-camera{
+
+.faulty-camera {
   overflow: hidden;
-  ul{
+  ul {
     margin-top: pxTorem(10px);
     background: $fff;
     width: 100%;
-    li{
+    li {
       padding: 0 3.7%;
       height: pxTorem(50px);
       line-height: pxTorem(50px);
       font-size: pxTorem($font_size15);
       @include borderDir(bottom);
-      &:last-child{
+      &:last-child {
         border-bottom: none;
       }
     }
   }
 }
-.shop-compare{
+
+.shop-compare {
   overflow: auto;
-  .search{
+  .search {
     width: 94.6%;
     height: pxTorem(30px);
     border-radius: 4px;
     margin: pxTorem(7px) 2.7%;
     background: $fff;
-    div{
+    div {
       display: table;
       margin: 0 auto;
-      .search-icon{
+      .search-icon {
         width: pxTorem(14px);
         height: pxTorem(14px);
         float: left;
         margin-top: pxTorem(8px);
         @include backgroundImg("../images/search.png");
       }
-      span:last-child{
+      span:last-child {
         float: right;
         margin-left: pxTorem(10px);
         line-height: pxTorem(30px);
@@ -696,24 +698,25 @@ $blue: #6F92EA;
       }
     }
   }
-  ul{
+  ul {
     background: $fff;
     width: 100%;
-    li{
+    li {
       height: pxTorem(44px);
       @include borderDir(bottom);
       font-size: pxTorem($font_size14);
       line-height: pxTorem(44px);
       color: $gray6;
       padding: 0 3.7%;
-      &:last-child{
+      &:last-child {
         border-bottom: 0;
       }
     }
   }
 }
-.heat-map-compare{
-  .choose-time{
+
+.heat-map-compare {
+  .choose-time {
     font-size: pxTorem($font_size14);
     line-height: pxTorem(44px);
     color: $gray9;
@@ -721,8 +724,8 @@ $blue: #6F92EA;
     padding: 0 3.7%;
     background: $fff;
     text-align: center;
-    span{
-      &.title{
+    span {
+      &.title {
         position: absolute;
         right: 3.7%;
         font-size: pxTorem($font_size16);
@@ -730,69 +733,69 @@ $blue: #6F92EA;
       }
     }
   }
-  .compare-time{
+  .compare-time {
     float: left;
     @include font($font_size14, 44px);
-    span{
-      &:first-child{
+    span {
+      &:first-child {
         @include font($font_size16, $font_size16);
         color: $gray6;
         margin-right: pxTorem(8px);
       }
     }
   }
-  .map-one, .map-two{
+  .map-one, .map-two {
     width: 100%;
     background: $fff;
     padding-bottom: pxTorem(20px);
-    img{
+    img {
       width: 92.6%;
       height: pxTorem(180px);
       margin: 0 3.7%;
     }
   }
-  .map-two{
+  .map-two {
     margin: pxTorem(10px) 0 pxTorem(20px);
   }
-  .add-compare{
+  .add-compare {
     width: 92.6%;
     padding: 0 3.7%;
     height: pxTorem(162px);
     background: $fff;
     margin-top: pxTorem(10px);
     overflow: hidden;
-    p{
+    p {
       @include font($font_size16, $font_size16);
       color: $gray6;
       margin: pxTorem(20px) 0 pxTorem(16px);
     }
-    ul{
+    ul {
       overflow: hidden;
-      li{
+      li {
         width: 48.4%;
         float: left;
         height: pxTorem(80px);
         background: $pink;
-        box-shadow: 0 4px 8px 0 rgba(111,146,234,0.40);
+        box-shadow: 0 4px 8px 0 rgba(111, 146, 234, 0.40);
         border-radius: 4px;
-        &:first-child{
+        &:first-child {
           margin-right: 3.2%;
           background: $perple;
         }
-        .icon{
+        .icon {
           width: pxTorem(36px);
           height: pxTorem(36px);
           margin: pxTorem(22px) pxTorem(12px) 0 pxTorem(28px);
         }
-        .time-icon{
+        .time-icon {
           @include backgroundImg("../images/time-icon.png");
         }
-        .shop-icon{
+        .shop-icon {
           @include backgroundImg("../images/shop-icon.png");
         }
-        span{
+        span {
           float: left;
-          &:last-child{
+          &:last-child {
             @include font($font_size16, 80px);
             color: $fff;
           }
@@ -801,21 +804,22 @@ $blue: #6F92EA;
     }
   }
 }
-.progress{
+
+.progress {
   width: 92.6%;
   padding: 0 3.7%;
   background: $fff;
-  p{
+  p {
     @include font($font_size14, $font_size14);
     color: $gray6;
     padding-top: pxTorem(20px);
   }
-  .progress-bar{
+  .progress-bar {
     width: 100%;
     height: pxTorem(20px);
     position: relative;
     margin-top: pxTorem(10px);
-    .full-bar{
+    .full-bar {
       width: 100%;
       height: pxTorem(6px);
       background: #EBEDF2;
@@ -823,20 +827,20 @@ $blue: #6F92EA;
       position: absolute;
       top: pxTorem(7px);
     }
-    .scroll-bar{
+    .scroll-bar {
       height: pxTorem(6px);
       background: #83AFFF;
       border-radius: 8px;
       position: absolute;
       top: pxTorem(7px);
     }
-    .local{
+    .local {
       position: absolute;
       left: -5px;
       top: 0;
       width: 30px;
       height: 20px;
-      .percent{
+      .percent {
         width: 30px;
         height: 18px;
         background: #4280F2;
@@ -848,7 +852,7 @@ $blue: #6F92EA;
         line-height: 18px;
         color: $fff;
       }
-      .percent:after{
+      .percent:after {
         content: ' ';
         position: absolute;
         background: transparent;
@@ -861,7 +865,7 @@ $blue: #6F92EA;
         border-right: 4px solid transparent;
         border-top: 4px solid #4280F2;
       }
-      .circle{
+      .circle {
         position: absolute;
         left: 5px;
         top: 0;
@@ -871,99 +875,101 @@ $blue: #6F92EA;
         box-sizing: border-box;
         border: 6px solid #4280F2;
         background: $fff;
-        box-shadow: 0 2px 4px 0 rgba(66,128,242,0.50);
+        box-shadow: 0 2px 4px 0 rgba(66, 128, 242, 0.50);
       }
     }
   }
 }
-.regional{
-  .nav,.time-range{
-    overflow: hidden;
-    height: pxTorem(44px);
-    background: $fff;
-    li{
-      width: 25%;
-      float: left;
-      text-align: center;
-      @include font($font_size16,42px);
-      color: $gray9;
-      span{
-        line-height: 42px;
-        display: block;
-        &:first-child{
-          width: 100%;
-        }
-        &:last-child{
-          width: pxTorem(20px);
-          height: 0;
-          border-top: 2px solid $fff;
-          margin: 0 auto;
-        }
+
+.nav, .time-range {
+  overflow: hidden;
+  height: pxTorem(44px);
+  background: $fff;
+  li {
+    width: 25%;
+    float: left;
+    text-align: center;
+    @include font($font_size16, 42px);
+    color: $gray9;
+    span {
+      line-height: 42px;
+      display: block;
+      &:first-child {
+        width: 100%;
       }
-      &.current{
-        color: $gray3;
-        span{
-          &:last-child{
-            border-top: 2px solid $gray3;
-          }
+      &:last-child {
+        width: pxTorem(20px);
+        height: 0;
+        border-top: 2px solid $fff;
+        margin: 0 auto;
+      }
+    }
+    &.current {
+      color: $gray3;
+      span {
+        &:last-child {
+          border-top: 2px solid $gray3;
         }
       }
     }
   }
-  .time-range{
+}
+.select-time {
+  height: 44px;
+  background: $fff;
+  ul {
+    display: table;
+    margin: 0 auto;
+    li {
+      float: left;
+      &.icon {
+        width: pxTorem(12px);
+        height: pxTorem(16px);
+        margin-top: pxTorem(14px);
+      }
+      &:first-child {
+        @include backgroundImg("../images/left-tips.png");
+      }
+      &:last-child {
+        float: right;
+        @include backgroundImg("../images/right-tips.png");
+      }
+      &:nth-child(2) {
+        text-align: center;
+        @include font($font_size18, 44px);
+        margin: 0 pxTorem(40px);
+      }
+    }
+  }
+}
+.regional {
+  .time-range {
     margin-top: pxTorem(10px);
     @include borderDir(bottom);
-    li{
+    li {
       width: 33.33%;
       box-sizing: border-box;
       @include borderDir(right);
-      &:last-child{
+      &:last-child {
         border-right: 0;
       }
     }
   }
-  .select-time{
-    height: 44px;
+  .list {
     background: $fff;
-    ul{
-      display: table;
-      margin: 0 auto;
-      li{
-        float: left;
-        &.icon{
-          width: pxTorem(12px);
-          height: pxTorem(16px);
-          margin-top: pxTorem(14px);
-        }
-        &:first-child{
-          @include backgroundImg("../images/left-tips.png");
-        }
-        &:last-child{
-          float: right;
-          @include backgroundImg("../images/right-tips.png");
-        }
-        &:nth-child(2){
-          text-align: center;
-          @include font($font_size18, 44px);
-          margin: 0 pxTorem(40px);
-        }
-      }
-    }
-  }
-  .list{
-    background: $fff;
-    li{
+    li {
       padding: 0 3.7%;
       height: pxTorem(44px);
       @include borderDir(bottom);
-      &:last-child{
+      overflow: hidden;
+      &:last-child {
         border-bottom: 0;
       }
-      span{
+      span {
         float: left;
         @include font($font_size14, 44px);
         color: $gray6;
-        &:first-child{
+        &:first-child {
           width: pxTorem(20px);
           height: pxTorem(20px);
           border-radius: 50%;
@@ -972,22 +978,22 @@ $blue: #6F92EA;
           color: $gray9;
           text-align: center;
         }
-        &.pink{
+        &.pink {
           background: #FF7474;
           color: $fff;
-          box-shadow: 0 2px 4px 0 rgba(255,116,116,0.50);
+          box-shadow: 0 2px 4px 0 rgba(255, 116, 116, 0.50);
         }
-        &.yellow{
+        &.yellow {
           background: #FFB257;
           color: $fff;
-          box-shadow: 0 2px 4px 0 rgba(255,178,87,0.50);
+          box-shadow: 0 2px 4px 0 rgba(255, 178, 87, 0.50);
         }
-        &.purple{
+        &.purple {
           background: #AE6FEA;
           color: $fff;
-          box-shadow: 0 2px 4px 0 rgba(174,111,234,0.50);
+          box-shadow: 0 2px 4px 0 rgba(174, 111, 234, 0.50);
         }
-        &:last-child{
+        &:last-child {
           float: right;
           color: $gray3;
           font-weight: bold;
@@ -996,37 +1002,37 @@ $blue: #6F92EA;
 
     }
   }
-  .content{
+  .content {
     background: $fff;
     margin-top: pxTorem(10px);
-    .fleeing{
+    .fleeing {
       overflow: hidden;
       padding: 0 3.7%;
       @include borderDir(bottom);
-      .fleeNum{
+      .fleeNum {
         @include font($font_size14, 44px);
       }
     }
-    .flee-panel{
+    .flee-panel {
       position: relative;
     }
-    .filter{
+    .filter {
       background: $fff;
       position: absolute;
       width: 100%;
       top: 0;
       z-index: 2;
-      p.title{
+      p.title {
         @include font($font_size13, $font_size13);
         color: $gray9;
         margin-top: pxTorem(15px);
         padding: 0 3.7%;
       }
-      ul{
+      ul {
         width: 92.6%;
         padding: 0 3.7%;
         overflow: hidden;
-        li{
+        li {
           width: 31%;
           float: left;
           box-sizing: border-box;
@@ -1036,25 +1042,25 @@ $blue: #6F92EA;
           color: $gray6;
           text-align: center;
           margin: pxTorem(10px) 3.5% 0 0;
-          &:nth-child(3n){
+          &:nth-child(3n) {
             margin-right: 0;
           }
-          &.select{
+          &.select {
             border-color: #6F92EA;
             color: #6F92EA;
-            background: rgba(111,146,234,0.10);
+            background: rgba(111, 146, 234, 0.10);
           }
-          &:last-child{
+          &:last-child {
             margin-bottom: pxTorem(5px);
           }
         }
       }
-      .buttons{
+      .buttons {
         width: 92.6%;
         padding: 0 3.7%;
         background: #F5F6F8;
         height: pxTorem(48px);
-        button{
+        button {
           width: pxTorem(66px);
           height: pxTorem(30px);
           @include font($font_size13, 30px);
@@ -1064,10 +1070,10 @@ $blue: #6F92EA;
           border-radius: 3px;
           float: left;
           margin-top: pxTorem(8px);
-          &:last-child{
+          &:last-child {
             float: right;
           }
-          &.select{
+          &.select {
             background: #6F92EA;
             border-color: #6F92EA;
             color: $fff;
@@ -1076,31 +1082,31 @@ $blue: #6F92EA;
       }
     }
   }
-  .down-up-tips{
-    span{
+  .down-up-tips {
+    span {
       float: left;
       color: $gray6;
-      &.icon{
+      &.icon {
         width: pxTorem(8px);
         height: pxTorem(5px);
         margin: pxTorem(20px) 0 0 pxTorem(5px);
       }
-      &.down-tips{
-         @include backgroundImg("../images/down-tip-s.png");
-       }
-      &.up-tips{
+      &.down-tips {
+        @include backgroundImg("../images/down-tip-s.png");
+      }
+      &.up-tips {
         @include backgroundImg("../images/up-tip-s.png");
       }
-      &.down-tips-s{
+      &.down-tips-s {
         @include backgroundImg("../images/down-tip-s-c.png");
       }
-      &.up-tips-s{
+      &.up-tips-s {
         @include backgroundImg("../images/up-tip-s-c.png");
       }
     }
   }
-  .content-mask{
-    &:after{
+  .content-mask {
+    &:after {
       content: "";
       width: 100%;
       height: 100%;
@@ -1110,21 +1116,21 @@ $blue: #6F92EA;
       bottom: 0;
     }
   }
-  .search{
+  .search {
     width: pxTorem(108px);
     height: pxTorem(30px);
     background: #EAEDF2;
     border-radius: 31px;
     float: right;
     margin-top: pxTorem(7px);
-    ul{
+    ul {
       display: table;
       margin: 0 auto;
-      li{
+      li {
         @include font($font_size14, 30px);
         color: #BFC4CB;
         float: left;
-        &:first-child{
+        &:first-child {
           width: pxTorem(14px);
           height: pxTorem(14px);
           margin: pxTorem(8px) pxTorem(6px) 0 0;
@@ -1133,25 +1139,25 @@ $blue: #6F92EA;
       }
     }
   }
-  .rank-list{
+  .rank-list {
     margin-top: pxTorem(10px);
-    li{
-      span{
-        &:first-child{
+    li {
+      span {
+        &:first-child {
           margin-right: 8%;
         }
-        &:nth-child(2){
+        &:nth-child(2) {
           width: 64.6%;
           text-align: center;
         }
-        &:last-child{
+        &:last-child {
           width: 20%;
           text-align: right;
           font-weight: inherit;
         }
       }
-      &.title{
-        span:first-child{
+      &.title {
+        span:first-child {
           color: $gray3;
           font-weight: bold;
           margin-right: 0;
@@ -1159,61 +1165,63 @@ $blue: #6F92EA;
           text-align: left;
         }
       }
-      &.your-rank{
-        span{
+      &.your-rank {
+        span {
           color: $blue;
-          &.blue{
+          &.blue {
             background: #6F92EA;
-            box-shadow: 0 2px 4px 0 rgba(111,146,234,0.50);
+            box-shadow: 0 2px 4px 0 rgba(111, 146, 234, 0.50);
             color: $fff;
           }
         }
       }
     }
   }
-  .search-page{
+  .search-page {
     height: pxTorem(44px);
     background: #EAEDF2;
-    .search{
+    .search {
       width: 80%;
       border-radius: 5px;
       float: left;
       background: $fff;
       margin-left: 3.7%;
-      ul{
+      ul {
         float: left;
         width: 100%;
         margin-left: pxTorem(10px);
-        li:last-child{
+        li:last-child {
           width: 90%;
-          input{
+          input {
             width: 100%;
             height: pxTorem(26px);
           }
         }
       }
     }
-    p{
+    p {
       float: right;
       @include font($font_size16, 44px);
       color: $gray6;
       margin-right: 3.7%;
     }
   }
-  .search-list{
-    ul{
+  .search-list {
+    ul {
       width: 100%;
       background: $fff;
-      li{
+      li {
         padding: 0 3.7%;
+        width: 92.6%;
         @include borderDir(bottom);
         height: pxTorem(44px);
-        span{
-          &:first-child{
+        overflow: hidden;
+        span {
+          &:first-child {
             float: left;
             @include font($font_size13, 44px);
           }
-          &:last-child{
+          &:last-child {
             width: pxTorem(20px);
             height: pxTorem(20px);
             float: right;
@@ -1223,21 +1231,21 @@ $blue: #6F92EA;
         }
       }
     }
-    .clear{
+    .clear {
       height: pxTorem(44px);
       background: $fff;
-      div{
+      div {
         display: table;
         margin: 0 auto;
-        span{
+        span {
           float: left;
-          &:first-child{
+          &:first-child {
             width: pxTorem(14px);
             height: pxTorem(15px);
             margin-top: pxTorem(14px);
             @include backgroundImg("../images/ico_clear.png");
           }
-          &:last-child{
+          &:last-child {
             @include font($font_size14, 44px);
             color: $gray9;
             margin-left: pxTorem(6px);
@@ -1247,20 +1255,21 @@ $blue: #6F92EA;
     }
   }
 }
-.overview{
+
+.overview {
   padding-bottom: pxTorem(40px);
-  .overall-data{
+  .overall-data {
     height: pxTorem(89px);
     background: $fff;
     overflow: hidden;
-    ul{
+    ul {
       width: 49.5%;
       float: left;
-      li{
+      li {
         text-align: center;
         @include font($font_size24, $font_size24);
         font-weight: bold;
-        &:first-child{
+        &:first-child {
           @include font($font_size14, $font_size14);
           color: $gray9;
           margin: pxTorem(16px) 0 pxTorem(15px);
@@ -1268,7 +1277,7 @@ $blue: #6F92EA;
         }
       }
     }
-    .col-split{
+    .col-split {
       width: 0;
       height: pxTorem(46px);
       float: left;
@@ -1276,17 +1285,17 @@ $blue: #6F92EA;
       margin-top: pxTorem(21px);
     }
   }
-  .quadrant{
+  .quadrant {
     height: pxTorem(200px);
     background: $fff;
     overflow: hidden;
     margin-top: pxTorem(10px);
-    .tick{
-        height: pxTorem(20px);
+    .tick {
+      height: pxTorem(20px);
       overflow: hidden;
       padding: pxTorem(17px) 0 pxTorem(10px);
       margin-top: pxTorem(10px);
-      li{
+      li {
         float: left;
         width: 20%;
         text-align: center;
@@ -1294,97 +1303,97 @@ $blue: #6F92EA;
         color: $gray9;
       }
     }
-    .quadrant-map{
+    .quadrant-map {
       width: 84.6%;
       height: pxTorem(105px);
       margin: 0 auto;
       @include backgroundImg("../images/sft.png");
       position: relative;
-      li{
+      li {
         position: absolute;
         @include font($font_size14, 16px);
         color: $gray6;
         width: pxTorem(80px);
         height: pxTorem(16px);
         text-align: center;
-        &.min{
+        &.min {
           left: -10.3%;
           bottom: pxTorem(-20px);
         }
-        &.one-four{
+        &.one-four {
           left: 14%;
           bottom: pxTorem(2px);
         }
-        &.middle{
+        &.middle {
           left: 37%;
           bottom: pxTorem(28px);
         }
-        &.three-four{
+        &.three-four {
           left: 61%;
           bottom: pxTorem(2px);
         }
-        &.max{
+        &.max {
           left: 85%;
           bottom: pxTorem(-20px);
         }
       }
     }
   }
-  .three-ranking{
+  .three-ranking {
     margin-top: pxTorem(10px);
     background: $fff;
-    .title{
+    .title {
       height: pxTorem(42px);
       @include borderDir(bottom);
       padding: 0 3.7%;
-      span{
+      span {
         float: left;
-        &.icon{
+        &.icon {
           width: pxTorem(16px);
           height: pxTorem(14px);
           margin-top: pxTorem(14px);
         }
-        &.top3{
+        &.top3 {
           @include backgroundImg("../images/top3.png");
         }
-        &.last3{
+        &.last3 {
           @include backgroundImg("../images/last3.png");
         }
-        &.flux3{
+        &.flux3 {
           @include backgroundImg("../images/flux3.png");
         }
-        &:last-child{
+        &:last-child {
           @include font($font_size14, 42px);
           color: $gray9;
           margin-left: pxTorem(8px);
         }
       }
     }
-    ul{
+    ul {
       padding-left: 3.7%;
-      li{
+      li {
         @include borderDir(bottom);
         overflow: hidden;
         padding-right: 3.7%;
-        &:last-child{
+        &:last-child {
           border-bottom: 0;
         }
-        i{
+        i {
           float: left;
-          &:first-child{
+          &:first-child {
             @include font($font_size14, 42px);
             color: $gray9;
             font-weight: bold;
           }
         }
-        span{
+        span {
           @include font($font_size14, 42px);
           color: $gray6;
-          &:nth-child(2){
+          &:nth-child(2) {
             float: left;
             margin-left: pxTorem(14px);
           }
-          &:last-child{
+          &:last-child {
             float: right;
             @include font($font_size15, 42px);
             font-weight: bold;
@@ -1395,80 +1404,81 @@ $blue: #6F92EA;
     }
   }
 }
-.competitive{
-  .tab-title{
+
+.competitive {
+  .tab-title {
     height: pxTorem(44px);
     background: $fff;
     overflow: hidden;
     margin-top: pxTorem(10px);
     @include borderDir(bottom);
-    ul{
+    ul {
       height: 20px;
       margin: pxTorem(12px) auto;
-      li{
+      li {
         width: 33.33%;
         box-sizing: border-box;
         @include borderDir(right);
         float: left;
         color: $gray6;
-        div{
+        div {
           display: table;
           margin: 0 auto;
-          span{
+          span {
             float: left;
             @include font($font_size14, 20px);
             color: inherit;
             margin-right: pxTorem(5px);
           }
         }
-        &.select{
+        &.select {
           color: $gray3;
           font-weight: bold;
         }
       }
     }
   }
-  .map{
+  .map {
     height: pxTorem(214px);
     background: #2C293B;
-    #map{
+    #map {
       width: 60%;
       height: pxTorem(214px);
       float: left;
     }
-    ul{
+    ul {
       float: right;
       width: 40%;
-      li{
+      li {
         text-align: center;
-        &.name{
+        &.name {
           @include font($font_size18, $font_size18);
           color: $fff;
           margin-top: pxTorem(28px);
         }
-        &.fraction-style{
+        &.fraction-style {
           margin-top: pxTorem(30px);
-          div{
+          div {
             display: table;
             margin: 0 auto;
             color: $fff;
             opacity: .5;
-            span{
+            span {
               float: left;
-              &:nth-child(2){
+              &:nth-child(2) {
                 @include font($font_size14, $font_size14);
                 margin: 0 pxTorem(5px);
               }
-              &.border{
+              &.border {
                 width: 12px;
                 height: 0;
-                border-bottom: 1px solid rgba($fff,.5);
+                border-bottom: 1px solid rgba($fff, .5);
                 margin-top: pxTorem(6px);
               }
             }
           }
         }
-        &.fraction{
+        &.fraction {
           font-family: Arvo-;
           font-size: 36px;
           color: #FFFFFF;
@@ -1477,7 +1487,7 @@ $blue: #6F92EA;
           margin-top: pxTorem(12px);
           font-weight: bold;
         }
-        &.time{
+        &.time {
           font-size: 12px;
           color: #605C72;
           text-align: center;
@@ -1487,37 +1497,38 @@ $blue: #6F92EA;
       }
     }
   }
-  .competitive-panel{
+  .competitive-panel {
     position: relative;
-    .filter{
+    .filter {
       width: 100%;
       background: $fff;
       position: absolute;
-      top:0;
+      top: 0;
       z-index: 2;
-      li{
+      li {
         @include borderDir(bottom);
         height: pxTorem(44px);
         padding: 0 3.7%;
-        span{
+        overflow: hidden;
+        span {
           float: left;
-          &:first-child{
+          &:first-child {
             width: pxTorem(14px);
             height: pxTorem(10px);
             margin-top: pxTorem(17px);
           }
-          &:last-child{
+          &:last-child {
             margin-left: pxTorem(10px);
             @include font($font_size14, 44px);
             color: $gray6;
           }
         }
-        &.select{
-          span{
-            &:first-child{
+        &.select {
+          span {
+            &:first-child {
               @include backgroundImg("../images/right.png");
             }
-            &:last-child{
+            &:last-child {
               color: $gray3;
             }
           }
@@ -1525,9 +1536,1054 @@ $blue: #6F92EA;
       }
     }
   }
-  .down-up-tips{
-    span.icon{
+  .down-up-tips {
+    span.icon {
       margin: pxTorem(7px) 0 0 0;
     }
   }
+}
+
+.full-data {
+  height: pxTorem(89px);
+  background: $fff;
+  overflow: hidden;
+  li {
+    width: 25%;
+    height: pxTorem(40px);
+    margin: pxTorem(25px) auto;
+    @include borderDir(right);
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    @include font($font_size14, 14px);
+    span {
+      @include font($font_size14, 14px);
+      color: $gray9;
+    }
+    > span {
+      display: block;
+      margin-top: -5px;
+    }
+    p {
+      font-family: Arvo-;
+      font-size: 20px;
+      color: #24282C;
+      text-align: center;
+      line-height: 20px;
+      font-weight: bold;
+      margin-top: pxTorem(14px);
+      span {
+        font-weight: 100;
+      }
+    }
+  }
+}
+
+.chart {
+  //width: 100%;
+  clear: both;
+  height: pxTorem(205px);
+  background: $fff;
+  margin-top: pxTorem(20px);
+  overflow: hidden;
+  .content {
+    height: pxTorem(205px);
+    position: relative;
+  }
+}
+
+.trend-map {
+  background: $fff;
+  margin-top: pxTorem(10px);
+  overflow: hidden;
+  .title {
+    @include font($font_size16, $font_size16);
+    color: $gray6;
+    font-weight: bold;
+    margin-top: pxTorem(20px);
+    margin-left: 3.7%;
+    span {
+      @include font($font_size12, $font_size12);
+      color: $gray9;
+      margin-left: pxTorem(6px);
+      font-weight: 100;
+    }
+  }
+  .tab {
+    margin: pxTorem(20px) 0 0 3.7%;
+    height: pxTorem(30px);
+    float: left;
+    @include border;
+    border-radius: 2px;
+    li {
+      width: pxTorem(70px);
+      box-sizing: border-box;
+      float: left;
+      @include font($font_size12, 30px);
+      text-align: center;
+      color: $gray9;
+      @include borderDir(left);
+      &:first-child {
+        border-left: 0;
+      }
+      &.select {
+        background: #6F92EA;
+        color: $fff;
+      }
+    }
+  }
+  .labels {
+    width: 92.6%;
+    margin: 0 3.7%;
+    li {
+      width: 31%;
+      height: pxTorem(32px);
+      box-sizing: border-box;
+      @include border;
+      @include font($font_size13, 32px);
+      text-align: center;
+      color: $gray6;
+      border-radius: 3px;
+      float: left;
+      margin: 0 3.5% pxTorem(10px) 0;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      &.select {
+        background: #6F92EA;
+        color: $fff;
+      }
+    }
+  }
+  .tips {
+    @include font($font_size12, $font_size12);
+    color: $gray9;
+    margin-top: pxTorem(10px);
+    text-align: center;
+  }
+  .explanation {
+    ul {
+      display: table;
+      margin: pxTorem(7px) auto;
+      overflow: hidden;
+      li {
+        float: left;
+        @include font($font_size13, $font_size15);
+        color: $gray6;
+        &.line {
+          width: pxTorem(42px);
+          height: 0;
+          @include borderDir(bottom);
+          margin-top: pxTorem(6px);
+        }
+        &:nth-child(2) {
+          margin: 0 8px;
+        }
+      }
+    }
+  }
+}
+
+.shop-suggest {
+  margin-bottom: pxTorem(40px);
+  .growth-trend {
+    height: pxTorem(410px);
+  }
+  .day-service {
+    height: pxTorem(318px);
+    .chart {
+      height: pxTorem(232px);
+    }
+  }
+  .shop-data {
+    height: pxTorem(500px);
+    .chart {
+      height: pxTorem(295px);
+    }
+  }
+  #growth-trend-line, #growth-trend-bar {
+    width: 150%;
+    height: pxTorem(205px);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #day-service-line {
+    width: 100%;
+    height: pxTorem(232px);
+  }
+  #shop-data-bar {
+    width: 100%;
+    height: pxTorem(295px);
+  }
+
+}
+
+.sales-suggest {
+  margin-bottom: pxTorem(40px);
+  .full-data {
+    li {
+      width: 33.33%;
+    }
+  }
+  .average-sales {
+    height: pxTorem(316px);
+    .chart {
+      height: pxTorem(230px);
+    }
+  }
+  .weekly-analysis {
+    height: pxTorem(410px);
+    .chart {
+      height: pxTorem(226px);
+    }
+  }
+  .sales-competitiveness-analysis {
+    height: pxTorem(392px);
+    .chart {
+      height: pxTorem(259px);
+    }
+  }
+
+  #average-sales {
+    width: 100%;
+    height: pxTorem(230px);
+  }
+
+  #weekly-analysis-line, #weekly-analysis-bar {
+    width: 100%;
+    height: pxTorem(226px);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #sales-competitiveness-analysis {
+    width: 100%;
+    height: pxTorem(259px);
+  }
+
+}
+
+.customer-suggest {
+  margin-bottom: pxTorem(40px);
+  .trend-map:first-child {
+    margin-top: 0;
+  }
+  .people-structure {
+    height: pxTorem(290px);
+    .chart {
+      height: pxTorem(204px);
+    }
+  }
+
+  #people-structure {
+    width: 100%;
+    height: pxTorem(204px);
+  }
+
+  .custom-max-time {
+    height: pxTorem(343px);
+    .chart {
+      height: pxTorem(214px);
+    }
+  }
+  #custom-max-time {
+    width: 100%;
+    height: pxTorem(214px);
+  }
+
+  .customer-shop-trend {
+    height: pxTorem(324px);
+    .chart {
+      height: pxTorem(238px);
+    }
+  }
+  #customer-shop-trend {
+    width: 100%;
+    height: pxTorem(238px);
+  }
+  .custom-long-time {
+    height: pxTorem(343px);
+    .chart {
+      height: pxTorem(257px);
+    }
+  }
+  #custom-long-time {
+    width: 100%;
+    height: pxTorem(257px);
+  }
+
+  .shop-flow-ratio {
+    height: pxTorem(290px);
+    .chart {
+      height: pxTorem(204px);
+    }
+  }
+  #shop-flow-ratio {
+    width: 100%;
+    height: pxTorem(204px);
+  }
+}
+
+.full-page-trend {
+  margin-bottom: pxTorem(20px);
+  .nav {
+    li {
+      width: 33.33%;
+    }
+  }
+  .chart {
+    height: pxTorem(240px);
+    margin-top: 0;
+    .content {
+      height: pxTorem(240px);
+    }
+  }
+  .dataArea {
+    height: pxTorem(96px);
+    overflow: hidden;
+    ul {
+      float: left;
+      width: 33.33%;
+      li {
+        margin: 0 auto;
+      }
+      .map-icon {
+        width: pxTorem(36px);
+        height: pxTorem(8px);
+      }
+      &.px {
+        .map-icon {
+          @include backgroundImg("../images/line-green.png");
+        }
+      }
+      &.rx {
+        .map-icon {
+          @include backgroundImg("../images/line-blue.png");
+        }
+      }
+      &.jkl, &.gzsc, &.zlsj {
+        .map-icon {
+          height: pxTorem(5px);
+          background: #A09DAA;
+        }
+      }
+      &.qzdd {
+        .map-icon {
+          @include backgroundImg("../images/line-purple.png");
+        }
+      }
+      &.fwnl {
+        .map-icon {
+          @include backgroundImg("../images/line-yellow.png");
+        }
+      }
+      &.kljj {
+        .map-icon {
+          @include backgroundImg("../images/line-pink.png");
+        }
+      }
+      .label {
+        @include font($font_size14, $font_size14);
+        color: $gray9;
+        margin: pxTorem(16px) 0 pxTorem(10px);
+        text-align: center;
+      }
+      .data-intro {
+        div {
+          display: table;
+          margin: 0 auto;
+        }
+        span {
+          float: left;
+          &:nth-child(2) {
+            @include font($font_size24, 24px);
+            color: $gray3;
+            font-weight: bold;
+            margin: 0 pxTorem(4px);
+          }
+        }
+        .icon {
+          width: pxTorem(11px);
+          height: pxTorem(13px);
+          margin-top: pxTorem(5px);
+        }
+        .i-up {
+          @include backgroundImg("../images/red-up.png");
+        }
+        .i-down {
+          @include backgroundImg("../images/green-down.png");
+        }
+      }
+    }
+  }
+}
+
+.storeTrends, .salesTrends {
+  .effect {
+    height: pxTorem(336px);
+    background: $fff;
+    &:last-child {
+      margin-top: pxTorem(10px);
+    }
+  }
+  #store-trend-line1, #store-trend-bar1, #store-trend-line2, #store-trend-bar2 {
+    width: 150%;
+    height: pxTorem(240px);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.customerTrends {
+  .chart {
+    height: pxTorem(446px);
+    margin-top: 0;
+    .content {
+      height: pxTorem(446px);
+    }
+  }
+  .effect {
+    height: 100%;
+    background: $fff;
+  }
+  #customer-trend-bar, #customer-trend-line {
+    width: 150%;
+    height: pxTorem(446px);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.attendance {
+  margin-bottom: pxTorem(40px);
+  .full-data {
+    li {
+      width: 50%;
+    }
+  }
+  .chart {
+    height: pxTorem(448px);
+    margin-top: 0;
+    background: #2C293B;
+    .content {
+      height: pxTorem(448px);
+      width: 100%;
+      position: relative;
+
+    }
+  }
+  #work-time-line {
+    width: 150%;
+    height: pxTorem(448px);
+  }
+
+  p.attendance-tittle {
+    height: pxTorem(40px);
+    background: $fff;
+    padding-left: 3.7%;
+    @include font($font_size16, 40px);
+    color: $gray6;
+  }
+  .work-time-trend, .visit-timetable {
+    margin-top: pxTorem(10px);
+  }
+  .visit-timetable {
+    padding-top: pxTorem(10px);
+    height: pxTorem(276px);
+    background: $fff;
+    table {
+      width: 92.6%;
+      margin: 0 3.7%;
+      height: pxTorem(204px);
+      font-size: 14px;
+      color: #5C626D;
+      line-height: 14px;
+      table-layout: fixed;
+      border-collapse: collapse;
+      @include border;
+      tr, td {
+        @include border;
+      }
+      td {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.escape, .arrive-shop {
+  margin-bottom: pxTorem(40px);
+}
+
+.reminder-switch {
+  height: pxTorem(50px);
+  background: $fff;
+  padding: 0 3.7%;
+  overflow: hidden;
+  margin-top: pxTorem(10px);
+  p {
+    float: left;
+    @include font($font_size16, 50px);
+    color: $gray3;
+  }
+}
+
+.user-infor {
+  .title {
+    height: pxTorem(40px);
+    background: $fff;
+    padding: 0 3.7%;
+    margin-top: pxTorem(10px);
+    @include font($font_size14, 40px);
+    color: $gray6;
+    @include borderDir(bottom);
+    .time {
+      float: left;
+    }
+    .totalNum {
+      float: right;
+    }
+  }
+  .user-panel {
+    padding: 0 3.7%;
+    height: pxTorem(128px);
+    overflow: hidden;
+    background: $fff;
+    margin-top: pxTorem(10px);
+    &:first-child {
+      margin-top: 0;
+    }
+    .ava {
+      float: left;
+      width: pxTorem(64px);
+      div {
+        position: relative;
+        width: pxTorem(64px);
+        height: pxTorem(64px);
+        margin: pxTorem(20px) 0 pxTorem(10px) 0;
+        img {
+          width: pxTorem(64px);
+          height: pxTorem(64px);
+        }
+        span {
+          position: absolute;
+          width: pxTorem(28px);
+          height: pxTorem(28px);
+          right: -3px;
+          bottom: -7px;
+        }
+        .male {
+          @include backgroundImg("../images/male.png");
+        }
+        .female {
+          @include backgroundImg("../images/female.png");
+        }
+      }
+
+      .age {
+        @include font($font_size14, 14px);
+        color: $gray6;
+        text-align: center;
+      }
+    }
+    ul {
+      float: left;
+      margin-left: pxTorem(20px);
+      @include font($font_size14, $font_size14);
+      color: $gray6;
+      li {
+        &:nth-child(2n+1) {
+          @include font($font_size12, $font_size12);
+          color: $gray9;
+          margin-top: pxTorem(23px);
+        }
+        &:nth-child(2n) {
+          margin-top: pxTorem(8px);
+        }
+      }
+    }
+  }
+}
+
+.arrive-shop {
+  .user-panel {
+    ul {
+      li {
+        &:nth-child(2n+1) {
+          @include font($font_size14, $font_size14);
+        }
+        &.arrive-shop-number {
+          margin-top: pxTorem(28px);
+          span {
+            @include font($font_size18, $font_size18);
+            font-weight: bold;
+            margin: 0 3px;
+            color: $gray3;
+          }
+        }
+      }
+    }
+  }
+}
+
+.opportunity {
+  .tab-title {
+    height: pxTorem(44px);
+    background: $fff;
+    ul {
+      width: 50%;
+      margin: 0 auto;
+      li {
+        width: 50%;
+        font-weight: bold;
+        font-size: $font_size18;
+      }
+    }
+  }
+  .statistics {
+    margin-top: pxTorem(10px);
+    .nav li {
+      width: 33.33%;
+    }
+    .repeat-arrive-number {
+      height: pxTorem(515px);
+      background: $fff;
+      .chart {
+        height: pxTorem(515px);
+        margin-top: 0;
+        background: #2C293B;
+        .content {
+          height: pxTorem(515px);
+          width: 100%;
+          position: relative;
+
+        }
+      }
+      p {
+        @include font($font_size14, $font_size14);
+        color: $gray6;
+        text-align: center;
+        margin-top: pxTorem(10px);
+      }
+    }
+  }
+  #repeat-arrive-number {
+    width: 150%;
+    height: pxTorem(515px);
+  }
+}
+
+.sales-report,.hours-setting,.attendance-manage {
+  overflow: hidden;
+  .panel{
+    margin-top: pxTorem(20px);
+  }
+  ul {
+    height: pxTorem(50px);
+    background: $fff;
+    @include font($font_size16, 50px);
+    @include borderDir(bottom);
+    padding: 0 3.7%;
+    &:last-child {
+      border-bottom: 0;
+    }
+    li {
+      position: relative;
+      width: 50%;
+      input{
+        height: pxTorem(50px);
+        width: 100%;
+        @include font($font_size16, 50px);
+        color: $gray3;
+        font-weight: bold;
+        text-align: right;
+      }
+      &:first-child {
+        float: left;
+        color: $gray6;
+      }
+      &:last-child{
+        float: right;
+        @include font($font_size16, 50px);
+        color: $gray3;
+        font-weight: bold;
+        text-align: right;
+      }
+      span{
+        float: right;
+      }
+      .select-btn{
+        width: pxTorem(18px);
+        height: pxTorem(50px);
+        float: right;
+        margin-left: 5px;
+
+        span{
+          width: pxTorem(18px);
+          height: pxTorem(23px);
+          position: relative;
+        }
+        i{
+          width: 0;
+          height: 0;
+          position: absolute;
+          border-radius: 2px;
+        }
+        .i-up{
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid #9FA4AC;
+          left: 4px;
+          top: 16px;
+        }
+        .i-down{
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid #9FA4AC;
+          left: 4px;
+          top: 2px;
+        }
+      }
+      &.right-tip{
+        width: pxTorem(7px);
+        height: pxTorem(12px);
+        margin-top: pxTorem(19px);
+        @include backgroundImg("../images/right-tip.png");
+      }
+    }
+    &.select{
+      li{
+        color: $gray3;
+        font-weight: bold;
+        &:last-child{
+          width: pxTorem(14px);
+          height: pxTorem(10px);
+          margin-top: pxTorem(20px);
+          @include backgroundImg("../images/right.png");
+        }
+      }
+    }
+  }
+  button{
+    width: 100%;
+    height: pxTorem(50px);
+    background: $fff;
+    @include font($font_size18, 50px);
+    color: #6F92EA;
+    text-align: center;
+    margin-top: pxTorem(40px);
+  }
+}
+.hours-setting{
+  ul li:last-child{
+    color: $gray9;
+    font-weight: inherit;
+  }
+}
+
+.my-employee-attendance{
+  .select-time{
+    @include borderDir(bottom);
+  }
+  .full-data{
+    li{
+      width: 50%;
+      &:last-child{
+        border-right: 0;
+      }
+    }
+  }
+  table{
+    width: 100%;
+    font-size: 14px;
+    color: #5C626D;
+    table-layout: fixed;
+    border-collapse: collapse;
+    background: $fff;
+    margin-top: pxTorem(10px);
+    @include border;
+    tr, td {
+      @include border;
+      height: pxTorem(40px);
+    }
+    td {
+      text-align: center;
+    }
+    thead{
+      td{
+        color: #A0A5AC;
+      }
+    }
+  }
+}
+
+.concatUs {
+  padding: 0 3.7%;
+  background: $fff;
+  overflow: hidden;
+  .businessCooperation, .companyAddress {
+    height: pxTorem(107px);
+    @include borderDir(bottom);
+    li {
+      font-size: pxTorem($font_size16);
+      line-height: 1;
+      &:first-child {
+        font-size: pxTorem($font_size18);
+        margin-top: pxTorem(40px);
+        color: $gray6;
+      }
+      &:nth-child(2) {
+        margin-top: pxTorem(18px);
+        color: $gray9;
+      }
+      &:last-child {
+        margin-top: pxTorem(16px);
+        color: $gray9;
+      }
+      span {
+        color: $gray3;
+        font-weight: bold;
+      }
+    }
+  }
+  .companyAddress {
+    border-bottom: none;
+    height: pxTorem(82px);
+  }
+  .aq {
+    width: pxTorem(150px);
+    height: pxTorem(176px);
+    margin: pxTorem(138px) auto 0;
+    img {
+      width: pxTorem(150px);
+      height: pxTorem(150px);
+    }
+    p {
+      font-size: pxTorem($font_size15);
+      line-height: 1;
+      margin-top: pxTorem(10px);
+      text-align: center;
+      color: $gray9;
+    }
+  }
+}
+.question {
+  padding: 0 3.7%;
+  overflow: hidden;
+  dl {
+    @include borderDir(bottom);
+    padding-bottom: pxTorem(20px);
+    dt {
+      font-size: pxTorem($font_size18);
+      line-height: 1;
+      color: $gray3;
+      margin-top: pxTorem(20px);
+    }
+    dd {
+      font-size: pxTorem($font_size15);
+      color: $gray6;
+      line-height: pxTorem(25px);
+      margin-top: pxTorem(10px);
+    }
+  }
+}
+
+p.errorTip{
+  width: 100%;
+  height: pxTorem(40px);
+  line-height: pxTorem(40px);
+  margin: pxTorem(10px) 0;
+  text-align: center;
+  color: $red;
+  font-size: pxTorem($font_size14);
+}
+
+.changePass {
+  input {
+    padding-left: 3.7%;
+    width: 96.3%;
+    height: pxTorem(50px);
+    line-height: pxTorem(50px);
+    font-size: pxTorem($font_size16);
+    color: $gray9;
+    background: $fff;
+    margin-top: pxTorem(20px);
+  }
+  button {
+    height: pxTorem(50px);
+    color: $blue;
+    font-size: pxTorem($font_size18);
+    line-height: pxTorem(50px);
+    text-align: center;
+    width: 100%;
+    background: $fff;
+    float: left;
+  }
+}
+
+.account {
+  ul {
+    background: $fff;
+    font-size: pxTorem($font_size16);
+    color: $gray9;
+    padding-left: 3.7%;
+    li {
+      @include borderDir(bottom);
+      padding-right: 3.7%;
+      overflow: hidden;
+      a {
+        display: block;
+        height: pxTorem(50px);
+      }
+      &:first-child {
+        a {
+          height: pxTorem(80px);
+        }
+        height: pxTorem(80px);
+        span {
+          line-height: pxTorem(80px);
+          img {
+            width: pxTorem(64px);
+            height: pxTorem(64px);
+            vertical-align: middle;
+            border-radius: 50%;
+          }
+          &.rightTip {
+            margin-top: pxTorem(33px);
+          }
+        }
+      }
+      span {
+        float: right;
+        line-height: pxTorem(50px);
+        color: $gray9;
+        &:first-child {
+          color: $gray3;
+          float: left;
+        }
+        &.rightTip {
+          margin-left: pxTorem(5px);
+        }
+      }
+    }
+  }
+  .changePassword {
+    margin-top: pxTorem(20px);
+    li:first-child {
+      height: pxTorem(50px);
+      span {
+        line-height: pxTorem(50px);
+        &:last-child {
+          margin-top: pxTorem(18px);
+        }
+      }
+    }
+  }
+  button {
+    height: pxTorem(50px);
+    color: $blue;
+    font-size: pxTorem($font_size18);
+    line-height: pxTorem(50px);
+    text-align: center;
+    width: 100%;
+    background: $fff;
+    float: left;
+    margin-top: pxTorem(20px);
+  }
+}
+
+.myManage {
+  .user-center-panel{
+    height: pxTorem(184px);
+    background: $fff;
+  }
+  .banner {
+    width: 100%;
+    height: pxTorem(110px);
+    background: url("../images/myBg.png");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    //padding: 0 3.7%;
+    img {
+      width: pxTorem(78px);
+      height: pxTorem(78px);
+      border: pxTorem(5px) solid rgba($fff, .3);
+      margin-top: pxTorem(80px);
+      border-radius: 50%;
+      float: left;
+    }
+    ul{
+      float: left;
+      width: calc(92.6% - 80px);
+      margin-left: pxTorem(14px);
+      margin-top: pxTorem(118px);
+      li{
+        text-align: left;
+        &.phone{
+          font-size: pxTorem($font_size18);
+          color: $gray3;
+          font-weight: bold;
+        }
+        &.end-time{
+          @include font($font_size12, $font_size12);
+          color: $gray9;
+          margin-top: pxTorem(10px);
+        }
+      }
+    }
+  }
+  .panel {
+    clear: both;
+    overflow: hidden;
+    margin-top: pxTorem(10px);
+    background: $fff;
+    //height: pxTorem(50px);
+    padding-left: 3.7%;
+    a {
+      display: block;
+      height: pxTorem(50px);
+    }
+    img {
+      float: left;
+      width: pxTorem(24px);
+      height: pxTorem(24px);
+      margin-top: pxTorem(13px);
+      margin-right: pxTorem(14px);
+    }
+    ul {
+      float: left;
+      font-size: pxTorem($font_size16);
+      color: $gray6;
+      width: calc(100% - .76rem);
+      &.border {
+        @include borderDir(bottom);
+      }
+      li {
+        overflow: hidden;
+        padding-right: 3.7%;
+        span {
+          line-height: pxTorem(50px);
+          &:first-child {
+            float: left;
+          }
+          &.rightTip {
+            float: right;
+          }
+        }
+      }
+    }
+  }
+}
+span.rightTip {
+  width: pxTorem(14px);
+  height: pxTorem(14px);
+  margin-top: pxTorem(18px);
+  background: url("../images/rightTip.png");
+  background-position: center;
+  background-size: cover;
 }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>销售建议</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1, minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pageStyle.css">
+    <script src="js/echarts.min.js"></script>
+</head>
+<body>
+<div class="sales-suggest">
+    <ul class="full-data">
+        <li>
+            <span>累计销额(元)</span>
+            <p>692K</p>
+        </li>
+        <li>
+            <span>累计销量(件)</span>
+            <p>398</p>
+        </li>
+        <li>
+            <span>累计均价(元)</span>
+            <p>1.8K</p>
+        </li>
+    </ul>
+    <div class="trend-map average-sales">
+        <div class="title">
+            平均日销售 <span>分析一段时间销售的变化趋势</span>
+        </div>
+        <ul class="tab">
+            <li class="select">近8周</li>
+            <li>近8月</li>
+            <!--<li>按月</li>-->
+        </ul>
+        <div class="chart">
+            <div class="">
+                <div id="average-sales"></div>
+                <!--<div id="growth-trend-bar"></div>-->
+            </div>
+        </div>
+    </div>
+    <div class="trend-map weekly-analysis">
+        <div class="title">
+            周内分析 <span>分析一周内的指标变化趋势</span>
+        </div>
+        <ul class="tab">
+            <li class="select">按日</li>
+            <li>按周</li>
+            <li>按月</li>
+        </ul>
+        <div class="chart">
+            <div class="content">
+                <div id="weekly-analysis-line"></div>
+                <div id="weekly-analysis-bar"></div>
+            </div>
+        </div>
+        <ul class="labels">
+            <li class="select">销量</li>
+            <li class="select">销额</li>
+            <li class="select">均价</li>
+            <li>客均价</li>
+            <li>转化率</li>
+            <li>时效</li>
+        </ul>
+    </div>
+    <div class="trend-map sales-competitiveness-analysis">
+        <div class="title">
+            销售竞争力分析 <span>根据此指标可以调整各店销售策略</span>
+        </div>
+        <ul class="tab">
+            <li class="select">近7天</li>
+            <li>近30天</li>
+            <li>全部</li>
+        </ul>
+        <div class="chart">
+            <div class="">
+                <div id="sales-competitiveness-analysis"></div>
+                <!--<div id="weekly-analysis-bar"></div>-->
+            </div>
+        </div>
+        <p class="tips">注：点击各个圆可以查看各个圆所代表的门店名称</p>
+    </div>
+</div>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/fontSize.js"></script>
+<script src="js/salesSuggesChart.js"></script>
+</body>
+</html>

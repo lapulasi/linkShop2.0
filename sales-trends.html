@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>销售趋势</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1, minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pageStyle.css">
+    <script src="js/echarts.min.js"></script>
+</head>
+<body>
+<div class="full-page-trend salesTrends">
+    <ul class="nav">
+        <li  class="current">
+            <span>按日</span>
+            <span></span>
+        </li>
+        <li>
+            <span>按周</span>
+            <span class=""></span>
+        </li>
+        <li>
+            <span>按月</span>
+            <span class=""></span>
+        </li>
+    </ul>
+    <div class="effect">
+        <div class="chart">
+            <div class="content">
+                <div id="store-trend-bar1"></div>
+                <div id="store-trend-line1"></div>
+            </div>
+        </div>
+        <div class="dataArea">
+            <ul class="px">
+                <li class="map-icon"></li>
+                <li class="label">营业额(元)</li>
+                <li class="data-intro">
+                    <div>
+                        <span class="icon i-up"></span>
+                        <span>69K</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="rx">
+                <li class="map-icon"></li>
+                <li class="label">均价(元)</li>
+                <li class="data-intro">
+                    <div>
+                        <span class="icon i-down"></span>
+                        <span>2.3K</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="kljj">
+                <li class="map-icon"></li>
+                <li class="label">客流均价(元)</li>
+                <li class="data-intro">
+                    <div>
+                        <span class="icon i-up"></span>
+                        <span>2.1K</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="effect">
+        <div class="chart">
+            <div class="content">
+                <div id="store-trend-bar2"></div>
+                <div id="store-trend-line2"></div>
+            </div>
+        </div>
+        <div class="dataArea">
+            <ul class="gzsc">
+                <li class="map-icon"></li>
+                <li class="label">销量(件)</li>
+                <li class="data-intro">
+                    <div>
+                        <span class="icon i-up"></span>
+                        <span>72</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="qzdd">
+                <li class="map-icon"></li>
+                <li class="label">转化率</li>
+                <li class="data-intro">
+                    <div>
+                        <span class="icon i-down"></span>
+                        <span>28%</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="fwnl">
+                <li class="map-icon"></li>
+                <li class="label">时效</li>
+                <li class="data-intro">
+                    <div>
+                        <span class="icon i-up"></span>
+                        <span>76K</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/fontSize.js"></script>
+<script src="js/salesTrends.js"></script>
+<script src="js/verticalSlide.js"></script>
+</body>
+</html>

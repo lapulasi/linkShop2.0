@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>门店趋势</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1, minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pageStyle.css">
+    <script src="js/echarts.min.js"></script>
+</head>
+<body>
+<div class="full-page-trend storeTrends">
+    <ul class="nav">
+        <li  class="current">
+            <span>按日</span>
+            <span></span>
+        </li>
+        <li>
+            <span>按周</span>
+            <span class=""></span>
+        </li>
+        <li>
+            <span>按月</span>
+            <span class=""></span>
+        </li>
+    </ul>
+    <div class="effect">
+        <div class="chart">
+            <div class="content">
+                <div id="store-trend-bar1"></div>
+                <div id="store-trend-line1"></div>
+            </div>
+        </div>
+        <div class="dataArea">
+            <ul class="px">
+                <li class="map-icon"></li>
+                <li class="label">坪效(/㎡)</li>
+                <li class="data-intro">
+                    <div>
+                        <span class="icon i-up"></span>
+                        <span>69K</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="rx">
+                <li class="map-icon"></li>
+                <li class="label">人效(/人)</li>
+                <li class="data-intro">
+                    <div>
+                        <span class="icon i-down"></span>
+                        <span>2.3K</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="jkl">
+                <li class="map-icon"></li>
+                <li class="label">集客力(㎡/天)</li>
+                <li class="data-intro">
+                    <div>
+                        <span class="icon i-up"></span>
+                        <span>26人</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="effect">
+        <div class="chart">
+            <div class="content">
+                <div id="store-trend-bar2"></div>
+                <div id="store-trend-line2"></div>
+            </div>
+        </div>
+        <div class="dataArea">
+            <ul class="gzsc">
+                <li class="map-icon"></li>
+                <li class="label">工作时长(/天)</li>
+                <li class="data-intro">
+                    <div>
+                        <span class="icon i-up"></span>
+                        <span>7h</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="qzdd">
+                <li class="map-icon"></li>
+                <li class="label">圈长到店(/天)</li>
+                <li class="data-intro">
+                    <div>
+                        <span class="icon i-down"></span>
+                        <span>3次</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="fwnl">
+                <li class="map-icon"></li>
+                <li class="label">服务能力(/人)</li>
+                <li class="data-intro">
+                    <div>
+                        <span class="icon i-up"></span>
+                        <span>58人</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/fontSize.js"></script>
+<script src="js/storeTrends.js"></script>
+<script src="js/verticalSlide.js"></script>
+</body>
+</html>

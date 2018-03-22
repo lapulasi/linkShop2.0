@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>顾客建议</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1, minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/pageStyle.css">
+    <script src="js/echarts.min.js"></script>
+</head>
+<body>
+<div class="customer-suggest">
+    <div class="trend-map people-structure">
+        <div class="title">
+            人流结构<span>可根据性别、年龄改变沟通策略</span>
+        </div>
+        <ul class="tab">
+            <li class="select">近7天</li>
+            <li>近30天</li>
+            <li>全部</li>
+        </ul>
+        <div class="chart">
+            <div class="">
+                <div id="people-structure"></div>
+                <!--<div id="growth-trend-bar"></div>-->
+            </div>
+        </div>
+    </div>
+    <div class="trend-map custom-max-time">
+        <div class="title">
+            顾客最多时段 <span>可根据顾客进店时段调整沟通效率</span>
+        </div>
+        <ul class="tab">
+            <li class="select">近7天</li>
+            <li>近30天</li>
+            <li>全部</li>
+        </ul>
+        <div class="chart">
+            <div class="">
+                <div id="custom-max-time"></div>
+                <!--<div id="growth-trend-bar"></div>-->
+            </div>
+        </div>
+        <div class="explanation">
+            <ul>
+                <li class="line lf"></li>
+                <li>各时间段客流量占比</li>
+                <li class="line lr"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="trend-map customer-shop-trend">
+        <div class="title">
+            顾客到店趋势 <span>可根据到店趋势判断工作重点</span>
+        </div>
+        <ul class="tab">
+            <li class="select">近7天</li>
+            <li>近30天</li>
+            <li>全部</li>
+        </ul>
+        <div class="chart">
+            <div class="">
+                <div id="customer-shop-trend"></div>
+                <!--<div id="growth-trend-bar"></div>-->
+            </div>
+        </div>
+    </div>
+    <div class="trend-map custom-long-time">
+        <div class="title">
+            顾客长驻时间 <span>可根据顾客驻留情况掌握购买规律</span>
+        </div>
+        <ul class="tab">
+            <li class="select">近7天</li>
+            <li>近30天</li>
+            <li>全部</li>
+        </ul>
+        <div class="chart">
+            <div class="">
+                <div id="custom-long-time"></div>
+                <!--<div id="growth-trend-bar"></div>-->
+            </div>
+        </div>
+        <div class="explanation">
+            <ul>
+                <li class="line lf"></li>
+                <li>各时间段客流量占比</li>
+                <li class="line lr"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="trend-map shop-flow-ratio">
+        <div class="title">
+            各店人流占比<span>可根据各店人流分配资源</span>
+        </div>
+        <ul class="tab">
+            <li class="select">近7天</li>
+            <li>近30天</li>
+            <li>全部</li>
+        </ul>
+        <div class="chart">
+            <div class="">
+                <div id="shop-flow-ratio"></div>
+                <!--<div id="growth-trend-bar"></div>-->
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-2.1.4.js"></script>
+<script src="js/fontSize.js"></script>
+<script src="js/customerSuggestChar.js"></script>
+</body>
+</html>
